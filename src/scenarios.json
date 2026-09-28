@@ -1,0 +1,510 @@
+[
+  {
+    "id": "nghi-hoc-ngay-mai",
+    "title": "Nghỉ học ngày mai?",
+    "ageBand": "12-16",
+    "learningGoal": "Kiểm tra ngày tháng của ảnh cắt và đối chiếu thông báo hiện tại trước khi chia sẻ.",
+    "claim": "Trong nhóm lớp có ảnh “Thông báo nghỉ học vì sửa điện”. Bài đăng nói toàn trường Học viện Sao Mai sẽ nghỉ học ngày mai, 02/10/2026. Ai thấy tin này thì báo ngay cho bạn bè nhé!",
+    "truthStatus": "false",
+    "topic": "Thông báo trường học",
+    "difficulty": "Vừa",
+    "sources": [
+      {
+        "id": "nghi-hoc-1",
+        "type": "image",
+        "title": "Ảnh cắt “Thông báo nghỉ học vì sửa điện”",
+        "author": "Tài khoản Mây Xám trong nhóm lớp",
+        "publishedAt": "2026-10-01",
+        "content": "Ảnh chỉ còn phần giữa của tờ thông báo: “Toàn trường nghỉ học ngày 02/10 vì bảo trì hệ thống điện”. Mép dưới ảnh bị cắt, nơi thường ghi năm học và số văn bản. Tài khoản đăng ảnh không nói đã chụp ở đâu. Khi phóng to, góc giấy còn một phần dòng “năm học 2025–2026”, nhưng ngày đăng trong nhóm là 01/10/2026.",
+        "citesSourceIds": [
+          "nghi-hoc-3"
+        ],
+        "relevanceNote": "Nguồn gây nhiễu: phần ngày 02/10 còn rõ, nhưng năm học bị cắt; đối chiếu với bản lưu năm 2025."
+      },
+      {
+        "id": "nghi-hoc-2",
+        "type": "message",
+        "title": "Tin nhắn chuyển tiếp trong nhóm lớp",
+        "author": "Lan Anh",
+        "publishedAt": "2026-10-01",
+        "content": "“Mình thấy ảnh bên nhóm khác, chắc mai cả trường nghỉ vì sửa điện. Mọi người báo nhau để khỏi đi học nhầm nhé.” Người gửi nói chỉ chuyển tiếp ảnh từ một nhóm không nhớ tên, chưa hỏi giáo viên chủ nhiệm và chưa thấy thông báo trong kênh trường. Dưới tin nhắn có nhiều bạn trả lời “thật không?”, nhưng không ai bổ sung được nguồn gốc độc lập.",
+        "citesSourceIds": [
+          "nghi-hoc-1"
+        ],
+        "relevanceNote": "Nguồn gây nhiễu: nhiều lượt chuyển tiếp không làm ảnh cũ trở thành thông báo hiện tại."
+      },
+      {
+        "id": "nghi-hoc-3",
+        "type": "official",
+        "title": "Bản lưu thông báo sửa điện năm 2025",
+        "author": "Văn phòng Học viện Sao Mai",
+        "publishedAt": "2025-10-01",
+        "content": "Bản lưu số 18/2025 của văn phòng trường ghi: “Học sinh toàn trường nghỉ ngày 02/10/2025 để bảo trì hệ thống điện; học lại theo thời khóa biểu từ 03/10/2025.” Phần thân và cách dàn trang trùng với ảnh đang lan truyền. Năm 2025 và số văn bản nằm ở mép dưới, đúng chỗ đã bị cắt khỏi ảnh trong nhóm lớp.",
+        "citesSourceIds": [],
+        "relevanceNote": "Nguồn chính để xác định ảnh xuất phát từ thông báo năm trước."
+      },
+      {
+        "id": "nghi-hoc-4",
+        "type": "official",
+        "title": "Thông báo học ngày 02/10/2026",
+        "author": "Văn phòng Học viện Sao Mai",
+        "publishedAt": "2026-10-01",
+        "content": "Thông báo số 31/2026 gửi các lớp lúc 16:30 ngày 01/10: “Ngày 02/10/2026, toàn trường học bình thường theo thời khóa biểu hiện hành. Việc kiểm tra điện diễn ra sau giờ học và không ảnh hưởng lịch học.” Giáo viên chủ nhiệm sẽ nhắc lại trong kênh lớp. Thông báo này ghi đúng ngày, năm và phạm vi mà bài đăng đang khẳng định.",
+        "citesSourceIds": [],
+        "relevanceNote": "Nguồn phản bác trực tiếp, hiện tại và đúng phạm vi toàn trường."
+      },
+      {
+        "id": "nghi-hoc-5",
+        "type": "social",
+        "title": "Bài đăng “Nghỉ học rồi!”",
+        "author": "Tin tức nhanh",
+        "publishedAt": "2026-10-01",
+        "content": "Trang Tin Nhanh Sao Mai đăng: “Nhiều nhóm lớp đang chia sẻ tin nghỉ học ngày 02/10, nhớ kiểm tra trước khi đến trường.” Bài viết dùng lại ảnh cắt và ghi “theo các bạn học sinh”, không dẫn thông báo năm 2026. Phần bình luận có người nhận ra giấy giống thông báo năm trước, nhưng trang chưa đính chính tiêu đề gây chú ý.",
+        "citesSourceIds": [
+          "nghi-hoc-1"
+        ],
+        "relevanceNote": "Thông tin không có nguồn gốc, có thể gây nhiễu"
+      },
+      {
+        "id": "nghi-hoc-6",
+        "type": "schedule",
+        "title": "Thời khóa biểu tuần đầu tháng 10/2026",
+        "author": "Phòng học vụ Học viện Sao Mai",
+        "publishedAt": "2026-09-30",
+        "content": "Bảng thời khóa biểu được phòng học vụ phát cho các lớp ngày 30/09/2026. Dòng thứ Sáu 02/10 có đủ các tiết sáng và chiều, kèm ghi chú “lịch có thể đổi khi văn phòng trường ra thông báo mới”. Bảng này cho biết kế hoạch học ban đầu; muốn xác nhận tình trạng hiện tại, người đọc vẫn phải xem thông báo mới nhất của trường.",
+        "citesSourceIds": [],
+        "relevanceNote": "Nguồn bổ trợ cho lịch hiện tại, nhưng lịch có thể đổi nên phải so với thông báo mới."
+      }
+    ],
+    "evidenceRules": [
+      {
+        "sourceId": "nghi-hoc-4",
+        "role": "refutes",
+        "limitation": "Thông báo có hiệu lực cho ngày 02/10/2026; nếu có cập nhật muộn hơn phải kiểm tra lại.",
+        "explanation": "Văn phòng trường xác nhận toàn trường học bình thường và sửa điện sau giờ học, phản bác trực tiếp tin nghỉ học."
+      },
+      {
+        "sourceId": "nghi-hoc-1",
+        "role": "insufficient",
+        "limitation": "Ảnh bị cắt mất năm; bản gốc là thông báo 2025.",
+        "explanation": "Ảnh có câu “nghỉ ngày 02/10”, nhưng không chứng minh trường nghỉ vào năm 2026."
+      },
+      {
+        "sourceId": "nghi-hoc-2",
+        "role": "insufficient",
+        "limitation": "Tin nhắn dẫn lại ảnh cắt, không phải xác nhận độc lập.",
+        "explanation": "Lượt chuyển tiếp trong nhóm không bổ sung chứng cứ về lịch học ngày 02/10/2026."
+      },
+      {
+        "sourceId": "nghi-hoc-3",
+        "role": "refutes",
+        "limitation": "Bản lưu chỉ xác nhận nguồn gốc ảnh, không tự cho biết lịch học 2026.",
+        "explanation": "Ngày và nội dung trùng ảnh lan truyền nhưng thuộc năm 2025, nên ảnh không áp dụng cho ngày 02/10/2026."
+      },
+      {
+        "sourceId": "nghi-hoc-5",
+        "role": "insufficient",
+        "limitation": "Bài viết dùng lại ảnh cắt, không có xác nhận riêng.",
+        "explanation": "Bài đăng mô tả tin đang lan truyền, không kiểm chứng tin đó."
+      },
+      {
+        "sourceId": "nghi-hoc-6",
+        "role": "context",
+        "limitation": "Thời khóa biểu có thể thay đổi; thông báo mới hơn có giá trị hơn.",
+        "explanation": "Lịch có tiết học ngày 02/10, phù hợp thông báo hiện tại nhưng một mình lịch chưa đủ bác tin nghỉ đột xuất."
+      }
+    ],
+    "hints": [
+      "Tìm thông báo của văn phòng trường cho ngày 02/10/2026.",
+      "Mở bản lưu năm trước và tìm số văn bản, ngày tháng trên ảnh.",
+      "So thời khóa biểu với thông báo mới nhất; chú ý văn bản thuộc năm nào."
+    ],
+    "teacherNotes": "Cho học sinh so ảnh cắt với bản lưu số 18/2025 để thấy năm bị bỏ đi, rồi đọc thông báo số 31/2026 và thời khóa biểu. Mấu chốt là thông báo hiện tại phản bác trực tiếp tin nghỉ toàn trường. Tin nhắn chuyển tiếp và bài đăng dùng lại cùng ảnh là nhiễu; số lượt chia sẻ không tạo ra nguồn độc lập.",
+    "variantClaims": [
+      "Ảnh được chuyền trong nhóm lớp nói toàn trường Học viện Sao Mai nghỉ học ngày 02/10/2026 để sửa điện. Hãy chuyển tiếp cho mọi người!",
+      "Ngày 02/10/2026, tất cả học sinh Học viện Sao Mai được nghỉ vì trường sửa hệ thống điện, theo ảnh thông báo trong nhóm."
+    ]
+  },
+  {
+    "id": "thu-vien-thu-bay",
+    "title": "Thư viện mở thứ Bảy?",
+    "ageBand": "12-16",
+    "learningGoal": "Đối chiếu lịch có ngày hiệu lực với xác nhận từ kênh thư viện cho đúng buổi được hỏi.",
+    "claim": "Một bài đăng trong nhóm đọc sách nói thư viện Trường Sao Mai mở cửa sáng thứ Bảy tuần này, 03/10/2026, từ 8:00 đến 11:00. Bạn có thể tới học nhóm mà không cần hỏi lại.",
+    "truthStatus": "verified",
+    "topic": "Thông tin thư viện",
+    "difficulty": "Vừa",
+    "sources": [
+      {
+        "id": "src1",
+        "type": "official",
+        "title": "Kênh thư viện xác nhận buổi 03/10",
+        "author": "Tổ thư viện Trường Sao Mai",
+        "publishedAt": "2026-10-01",
+        "content": "Thông báo của tổ thư viện gửi qua kênh thư viện: “Sáng thứ Bảy 03/10/2026, phòng đọc mở 8:00–11:00. Học sinh có thể vào đọc sách hoặc học nhóm, nhớ mang thẻ thư viện. Buổi chiều đóng cửa để kiểm kê.” Thông báo nhắc rõ buổi sáng, ngày cụ thể và cách vào phòng đọc; không nói rằng mọi thứ Bảy sau đó đều giống nhau.",
+        "citesSourceIds": [
+          "src6"
+        ],
+        "relevanceNote": "Xác nhận hiện tại từ kênh thư viện, đúng ngày và khung giờ."
+      },
+      {
+        "id": "src2",
+        "type": "message",
+        "title": "Bạn học rủ tới thư viện",
+        "author": "Bạn An (nhân vật mô phỏng)",
+        "publishedAt": "2026-09-25",
+        "content": "“Thứ Bảy này tới thư viện học nhóm nhé, nghe nói mở buổi sáng.” Người gửi nói đã thấy ảnh chụp thông báo trong nhóm đọc sách nhưng chưa mở lịch hoạt động. Tin nhắn được chuyển cho nhiều lớp. Đây là lời kể về thông báo, hữu ích để biết tin đang lan truyền nhưng không phải lịch gốc của thư viện.",
+        "citesSourceIds": [
+          "src3"
+        ],
+        "relevanceNote": "Học sinh xác nhận thông tin từ nguồn chính thức, tăng độ tin cậy."
+      },
+      {
+        "id": "src3",
+        "type": "image",
+        "title": "Ảnh bảng thông báo ở hành lang",
+        "author": "Bạn Bình (nhân vật mô phỏng)",
+        "publishedAt": "2026-09-28",
+        "content": "Ảnh bảng tin có dòng “Thư viện mở sáng thứ Bảy 03/10, 8:00–11:00”. Góc ảnh cho thấy dấu của tổ thư viện nhưng phần dưới bảng bị che bởi khung cửa. Một tờ giấy khác trên bảng ghi lịch tháng 9. Người xem cần xác định ảnh chụp lúc nào và liệu có thông báo mới hơn hay không.",
+        "citesSourceIds": [
+          "src6"
+        ],
+        "relevanceNote": "Hình ảnh trực tiếp từ bảng thông báo, hỗ trợ xác minh thông tin."
+      },
+      {
+        "id": "src4",
+        "type": "article",
+        "title": "Bài viết dùng lịch cũ",
+        "author": "Trang Góc Học Đường",
+        "publishedAt": "2026-09-30",
+        "content": "Bài viết hỏi “Thư viện có thật sự mở thứ Bảy?” rồi trích lịch tháng 9: khi đó thư viện chỉ mở từ thứ Hai đến thứ Sáu. Bài không cập nhật lịch có hiệu lực từ 01/10/2026, dù tiêu đề được đăng lại vào cuối tháng 9. Người đọc vội có thể lấy lịch cũ để phủ nhận một buổi mở mới.",
+        "citesSourceIds": [],
+        "relevanceNote": "Nguồn gây nhiễu có lịch cũ; cần kiểm tra ngày hiệu lực."
+      },
+      {
+        "id": "src5",
+        "type": "social",
+        "title": "Bài đăng của nhóm đọc sách",
+        "author": "Nhóm Sách Mỗi Tuần",
+        "publishedAt": "2026-10-01",
+        "content": "“Hẹn gặp nhau tại thư viện sáng 03/10 lúc 8 giờ!” Bài đăng kèm ảnh tờ lịch tháng 10 và ghi rằng nhóm đã hỏi tổ thư viện. Tuy vậy, bài không có văn bản trả lời riêng; nội dung chủ yếu dẫn lại lịch đã công bố. Nó có thể giúp tìm nguồn gốc, nhưng không phải một xác nhận độc lập.",
+        "citesSourceIds": [
+          "src6"
+        ],
+        "relevanceNote": "Nguồn sao chép, không tính là xác nhận độc lập."
+      },
+      {
+        "id": "src6",
+        "type": "schedule",
+        "title": "Lịch thư viện tháng 10 có ngày hiệu lực",
+        "author": "Tổ thư viện Trường Sao Mai",
+        "publishedAt": "2026-09-29",
+        "content": "Lịch hoạt động có hiệu lực từ 01/10/2026 ghi: “Thứ Bảy 03/10: mở phòng đọc 8:00–11:00; chiều đóng để kiểm kê.” Các ngày thứ Bảy khác được ghi riêng từng buổi, không mặc nhiên mở đều. Tờ lịch có ngày ban hành 29/09, tên tổ thư viện và dòng hướng dẫn mang thẻ. Thông tin khớp ngày và thời gian trong bài đăng.",
+        "citesSourceIds": [],
+        "relevanceNote": "Lịch gốc có ngày hiệu lực, trực tiếp xác nhận sáng 03/10."
+      }
+    ],
+    "evidenceRules": [
+      {
+        "sourceId": "src1",
+        "role": "supports",
+        "limitation": "Thông báo chỉ xác nhận riêng buổi sáng 03/10, không suy rộng mọi thứ Bảy.",
+        "explanation": "Kênh thư viện xác nhận đúng ngày 03/10 và giờ mở cửa 8:00–11:00."
+      },
+      {
+        "sourceId": "src2",
+        "role": "insufficient",
+        "limitation": "Tin nhắn dựa trên ảnh được chuyển tiếp, không phải nguồn gốc.",
+        "explanation": "Bạn học nhắc tới tin mở cửa nhưng không tự xác minh lịch."
+      },
+      {
+        "sourceId": "src3",
+        "role": "context",
+        "limitation": "Ảnh không hiện toàn bộ bảng và thời điểm chụp cần đối chiếu.",
+        "explanation": "Ảnh cho thấy một dòng lịch phù hợp nhưng nên đọc lịch có ngày hiệu lực."
+      },
+      {
+        "sourceId": "src4",
+        "role": "insufficient",
+        "limitation": "Bài dẫn lịch tháng 9 đã hết hiệu lực trước ngày 03/10.",
+        "explanation": "Lịch cũ không phủ nhận buổi mở được ghi trong lịch tháng 10."
+      },
+      {
+        "sourceId": "src5",
+        "role": "insufficient",
+        "limitation": "Bài đăng dẫn lại lịch, không phải xác nhận độc lập.",
+        "explanation": "Bài rủ bạn đọc sách nhưng thông tin ngày giờ vẫn xuất phát từ lịch thư viện."
+      },
+      {
+        "sourceId": "src6",
+        "role": "supports",
+        "limitation": "Lịch có thể được điều chỉnh; cần xem xác nhận gần ngày diễn ra.",
+        "explanation": "Lịch tháng 10 ghi rõ buổi sáng 03/10 mở 8:00–11:00."
+      }
+    ],
+    "hints": [
+      "Tìm lịch thư viện có ngày hiệu lực.",
+      "Xem thông báo từ kênh thư viện gần ngày 03/10.",
+      "So buổi sáng trong lịch với lời kể trong bài đăng."
+    ],
+    "teacherNotes": "Đường kiểm chứng: đọc ngày hiệu lực trên lịch tháng 10 (src6), rồi so với xác nhận gần ngày diễn ra từ kênh thư viện (src1). Bài viết src4 dùng lịch tháng 9 là nhiễu có mục đích; tin nhắn và bài nhóm đọc sách đều dẫn lại lịch, không tăng số nguồn độc lập. Nhấn mạnh tuyên bố chỉ về buổi sáng 03/10.",
+    "variantClaims": [
+      "Sáng thứ Bảy 03/10/2026, thư viện Trường Sao Mai mở từ 8:00 đến 11:00 cho học sinh vào học nhóm.",
+      "Nhóm đọc sách báo rằng thư viện Trường Sao Mai đón học sinh trong buổi sáng 03/10/2026, từ 8:00 đến 11:00."
+    ]
+  },
+  {
+    "id": "doi-gio-hoc",
+    "title": "Cả trường đổi giờ học?",
+    "ageBand": "12-16",
+    "learningGoal": "Đọc điều kiện về khối lớp và buổi học; tránh biến thay đổi cục bộ thành tin áp dụng toàn trường.",
+    "claim": "Một bài đăng nói từ thứ Hai 05/10/2026, tất cả học sinh Trường Sao Mai đều chuyển sang bắt đầu học lúc 9 giờ. “Cứ tới muộn hơn một tiếng, trường đã đổi lịch rồi!”",
+    "truthStatus": "misleading",
+    "topic": "Thông tin học tập",
+    "difficulty": "Vừa",
+    "sources": [
+      {
+        "id": "source-1",
+        "type": "official",
+        "title": "Thông báo điều chỉnh giờ vào học khối 8",
+        "author": "Văn phòng Trường Sao Mai",
+        "publishedAt": "2026-10-01",
+        "content": "Thông báo số 42/2026: “Từ thứ Hai 05/10/2026, học sinh khối 8 học buổi sáng bắt đầu lúc 9:00 trong thời gian sửa khu phòng học B. Học sinh các khối khác và các lớp học buổi chiều giữ nguyên giờ vào lớp.” Văn phòng gửi riêng cho các lớp liên quan và đăng bản đầy đủ trong mục thông báo. Dòng “khối 8 học buổi sáng” được in đậm.",
+        "citesSourceIds": [],
+        "relevanceNote": "Nguồn chính: thay đổi có thật, nhưng chỉ cho khối 8 buổi sáng."
+      },
+      {
+        "id": "source-2",
+        "type": "message",
+        "title": "Học sinh khối 8 nhắn lại",
+        "author": "Lan Anh, học sinh khối 8",
+        "publishedAt": "2026-10-03",
+        "content": "“Lớp mình khối 8 học ca sáng sẽ vào lúc 9 giờ từ thứ Hai. Thầy cô dặn xem thông báo số 42/2026 và kiểm tra thời khóa biểu mới.” Người gửi không nói về các khối khác. Khi tin nhắn bị chụp lại và bỏ mất câu đầu, người xem có thể tưởng đây là lịch của toàn trường.",
+        "citesSourceIds": [
+          "source-1"
+        ],
+        "relevanceNote": "Nguồn dẫn lại đúng một phần nhưng dễ bị cắt mất phạm vi."
+      },
+      {
+        "id": "source-3",
+        "type": "message",
+        "title": "Tin nhắn phụ huynh trong nhóm",
+        "author": "Nguyễn Văn Minh",
+        "publishedAt": "2026-10-02",
+        "content": "“Nghe nói từ tuần sau học sinh cả trường đi lúc 9 giờ. Tôi nhận tin từ nhóm khác, chưa thấy văn bản nên đang hỏi lại giáo viên.” Tin nhắn không có số thông báo, không chỉ rõ khối lớp hay buổi học. Nhiều người trả lời dựa trên cùng một ảnh chụp ngắn của tin nhắn này.",
+        "citesSourceIds": [
+          "source-2"
+        ],
+        "relevanceNote": "Nguồn gây nhiễu: phạm vi toàn trường được thêm vào khi chuyển tiếp."
+      },
+      {
+        "id": "source-4",
+        "type": "social",
+        "title": "Bài đăng “9 giờ mới vào học”",
+        "author": "Người dùng ẩn danh",
+        "publishedAt": "2026-10-04",
+        "content": "Trang Chuyện Trường Mình đăng ảnh phần cuối thông báo số 42/2026, chỉ còn câu “bắt đầu lúc 9:00 từ 05/10”. Phần đầu ghi khối 8 và buổi sáng không có trong ảnh. Bài viết thêm dòng “cả trường đổi giờ”, nhưng không dẫn liên kết tới thông báo đầy đủ.",
+        "citesSourceIds": [
+          "source-1"
+        ],
+        "relevanceNote": "Nguồn gây nhiễu chính: tiêu đề mở rộng phạm vi thông báo."
+      },
+      {
+        "id": "source-5",
+        "type": "article",
+        "title": "Bài hướng dẫn đọc thông báo đổi giờ",
+        "author": "Câu lạc bộ Truyền thông Sao Mai",
+        "publishedAt": "2026-10-03",
+        "content": "Bản tin của câu lạc bộ truyền thông nhắc học sinh kiểm tra ba chi tiết khi đọc tin đổi giờ: ngày bắt đầu, khối lớp và buổi học. Bài dùng ví dụ thông báo số 42/2026, lưu ý nếu chỉ chụp một dòng “9:00” thì thiếu phạm vi áp dụng. Bản tin giải thích cách kiểm tra, không tự ban hành lịch học.",
+        "citesSourceIds": [
+          "source-1"
+        ],
+        "relevanceNote": "Nguồn giải thích cách đọc phạm vi, không thay thế thông báo."
+      },
+      {
+        "id": "source-6",
+        "type": "schedule",
+        "title": "Thời khóa biểu tuần 05/10 của các khối",
+        "author": "Phòng học vụ Trường Sao Mai",
+        "publishedAt": "2026-10-04",
+        "content": "Bảng tuần bắt đầu 05/10/2026 liệt kê giờ vào lớp theo khối. Khối 8 học sáng bắt đầu 9:00; khối 7 và 9 vẫn 8:00; các lớp khối 8 học chiều không thay đổi. Ghi chú ở cuối bảng dẫn tới thông báo số 42/2026. Bảng giúp kiểm tra câu “tất cả học sinh” bằng cách so nhiều hàng thay vì chỉ một hàng khối 8.",
+        "citesSourceIds": [
+          "source-1"
+        ],
+        "relevanceNote": "Đối chiếu phạm vi: các khối khác không đổi giờ."
+      }
+    ],
+    "evidenceRules": [
+      {
+        "sourceId": "source-1",
+        "role": "context",
+        "limitation": "Áp dụng riêng khối 8 học sáng, không phải tất cả học sinh.",
+        "explanation": "Việc vào học lúc 9:00 là thật nhưng chỉ cho một nhóm, nên bài đăng bỏ mất điều kiện quan trọng."
+      },
+      {
+        "sourceId": "source-2",
+        "role": "context",
+        "limitation": "Tin nhắn dẫn lại thông báo và chỉ nói về lớp người gửi.",
+        "explanation": "Lời kể phù hợp với khối 8, không xác nhận toàn trường đổi giờ."
+      },
+      {
+        "sourceId": "source-3",
+        "role": "insufficient",
+        "limitation": "Người gửi chưa kiểm tra văn bản và dẫn lại nhóm khác.",
+        "explanation": "Tin nhắn thêm phạm vi toàn trường nhưng không có bằng chứng."
+      },
+      {
+        "sourceId": "source-4",
+        "role": "insufficient",
+        "limitation": "Ảnh cắt bỏ phần nêu khối lớp và buổi học.",
+        "explanation": "Bài đăng là nguồn gốc của cách hiểu sai; tiêu đề không phản ánh bản đầy đủ."
+      },
+      {
+        "sourceId": "source-5",
+        "role": "context",
+        "limitation": "Bản tin hướng dẫn cách đọc, không ban hành giờ học.",
+        "explanation": "Bài viết chỉ ra cần kiểm tra phạm vi của thông báo."
+      },
+      {
+        "sourceId": "source-6",
+        "role": "refutes",
+        "limitation": "Lịch tuần có thể thay đổi nếu trường ra thông báo mới.",
+        "explanation": "Bảng cho thấy khối 7, 9 vẫn 8:00 và khối 8 học chiều không đổi, bác bỏ chữ “tất cả”."
+      }
+    ],
+    "hints": [
+      "Đọc trọn câu nêu ai đổi giờ và buổi học nào.",
+      "Đối chiếu hàng khối 8 và các khối khác trong thời khóa biểu.",
+      "Tìm xem bài đăng đã bỏ điều kiện nào từ thông báo đầy đủ."
+    ],
+    "teacherNotes": "Đọc bản đầy đủ thông báo số 42/2026 (source-1), khoanh điều kiện “khối 8 học buổi sáng”, rồi so từng hàng của thời khóa biểu (source-6). Bài đăng source-4 cắt mất dòng điều kiện; tin nhắn source-3 thêm chữ “cả trường”. Kết luận gây hiểu lầm vì phần đổi sang 9:00 có thật nhưng không áp dụng cho mọi học sinh.",
+    "variantClaims": [
+      "Từ ngày 05/10/2026, mọi khối lớp của Trường Sao Mai đều bắt đầu buổi học lúc 9:00.",
+      "Bài đăng khẳng định toàn trường Sao Mai đổi giờ vào 9:00 từ thứ Hai 05/10/2026."
+    ]
+  },
+  {
+    "id": "hoc-bong-chua-ro",
+    "title": "Học bổng chưa rõ nguồn?",
+    "ageBand": "12-16",
+    "learningGoal": "Nhận ra nhiều bài sao chép cùng lời kể không tạo bằng chứng độc lập; chấp nhận kết luận chưa đủ bằng chứng.",
+    "claim": "Một tin nhắn lan truyền nói Quỹ Cánh Diều vừa có chương trình học bổng mới dành cho học sinh trong tháng 10/2026. Tin không dẫn thông báo gốc và rủ mọi người gửi thông tin cá nhân để “giữ suất”.",
+    "truthStatus": "insufficient",
+    "topic": "Giáo dục, học bổng, kiểm chứng thông tin",
+    "difficulty": "Khó",
+    "sources": [
+      {
+        "id": "src-001",
+        "type": "message",
+        "title": "Tin nhắn “giữ suất học bổng”",
+        "author": "Tài khoản Mùa Gió",
+        "publishedAt": "2026-09-27",
+        "content": "“Quỹ Cánh Diều mở học bổng mới tháng 10, suất có hạn. Ai muốn giữ suất thì nhắn họ tên, lớp và ảnh giấy tờ cho mình trước tối nay.” Người gửi không cung cấp mã chương trình, văn bản thông báo hoặc người phụ trách tại quỹ. Tin nhắn được chụp lại nhiều lần; trong sandbox này không có biểu mẫu hay nơi nhận dữ liệu thật.",
+        "citesSourceIds": [],
+        "relevanceNote": "Nguồn gốc duy nhất của lời đồn, đồng thời là tín hiệu cần bảo vệ dữ liệu cá nhân."
+      },
+      {
+        "id": "src-002",
+        "type": "official",
+        "title": "Trang thông tin của Quỹ Cánh Diều",
+        "author": "Ban truyền thông Quỹ Cánh Diều",
+        "publishedAt": "2026-09-28",
+        "content": "Mục thông báo của quỹ hiện liệt kê các chương trình đã công bố đến ngày 28/09/2026. Chưa có mục nào về một đợt học bổng tháng 10. Phần liên hệ nói rằng các đợt mới sẽ được công bố trên kênh này khi hoàn tất xét duyệt. Trang chưa đăng câu xác nhận hoặc phủ nhận riêng về tin nhắn đang lan truyền.",
+        "citesSourceIds": [],
+        "relevanceNote": "Kênh tổ chức chưa có thông tin đợt này; sự vắng mặt không đủ để bác bỏ sự tồn tại."
+      },
+      {
+        "id": "src-003",
+        "type": "message",
+        "title": "Bài chuyển tiếp trong nhóm học sinh",
+        "author": "Người dùng B",
+        "publishedAt": "2026-09-28",
+        "content": "“Mình thấy tin về học bổng Cánh Diều bên nhóm khác, hình như tháng 10 có đợt mới. Ai quan tâm đọc ảnh đính kèm.” Ảnh đính kèm là bản chụp nguyên văn tin nhắn của tài khoản Mùa Gió, kể cả câu “giữ suất”. Người đăng không có tài liệu khác và chưa liên hệ quỹ để hỏi.",
+        "citesSourceIds": [
+          "src-001"
+        ],
+        "relevanceNote": "Bản sao của lời kể đầu tiên, không phải nguồn độc lập."
+      },
+      {
+        "id": "src-004",
+        "type": "article",
+        "title": "Bài viết về học bổng các năm trước",
+        "author": "Câu lạc bộ Hướng nghiệp",
+        "publishedAt": "2026-09-25",
+        "content": "Bài viết tổng hợp các đợt học bổng của Quỹ Cánh Diều năm 2024 và 2025, gồm thời gian và điều kiện khi đó. Tác giả ghi rõ đây là dữ liệu tham khảo lịch sử; quỹ có thể thay đổi chương trình mỗi năm. Bài không nêu học bổng tháng 10/2026 và không xác nhận lời rủ đăng ký trong tin nhắn mới.",
+        "citesSourceIds": [],
+        "relevanceNote": "Nguồn gây nhiễu: quỹ từng có học bổng không chứng minh đợt tháng 10/2026."
+      },
+      {
+        "id": "src-005",
+        "type": "social",
+        "title": "Bài đăng đếm lượt chia sẻ",
+        "author": "Trang Tin Học Đường",
+        "publishedAt": "2026-09-28",
+        "content": "Trang đăng lại ảnh tin nhắn Mùa Gió và viết: “Hàng trăm lượt chia sẻ về học bổng mới tháng 10.” Phần mô tả không dẫn chương trình gốc, điều kiện chính thức hay xác nhận từ quỹ. Con số chia sẻ cho biết tin đang lan rộng, không cho biết tin đúng. Bài còn nhắc người đọc tránh gửi ảnh giấy tờ qua tin nhắn.",
+        "citesSourceIds": [
+          "src-001"
+        ],
+        "relevanceNote": "Bản sao khác của cùng lời đồn; lượt chia sẻ không xác minh nội dung."
+      },
+      {
+        "id": "src-006",
+        "type": "official",
+        "title": "Quy trình công bố học bổng của quỹ",
+        "author": "Ban điều phối Quỹ Cánh Diều",
+        "publishedAt": "2026-08-20",
+        "content": "Tài liệu hướng dẫn chung của quỹ nói mỗi chương trình học bổng sẽ có tên đợt, điều kiện, thời hạn và người liên hệ trên kênh thông tin chính thức trước khi nhận hồ sơ. Tài liệu này không liệt kê kế hoạch cho tháng 10/2026. Nó giúp người đọc biết phải tìm loại thông tin nào, nhưng không xác nhận hoặc phủ nhận một đợt chưa được công bố.",
+        "citesSourceIds": [],
+        "relevanceNote": "Quy trình xác minh, không phải bằng chứng về đợt cụ thể."
+      }
+    ],
+    "evidenceRules": [
+      {
+        "sourceId": "src-001",
+        "role": "insufficient",
+        "limitation": "Không có mã chương trình hay thông báo gốc; yêu cầu dữ liệu cá nhân không chứng minh tin đúng.",
+        "explanation": "Tin nhắn là nơi phát sinh tuyên bố, chưa phải bằng chứng học bổng có thật."
+      },
+      {
+        "sourceId": "src-002",
+        "role": "context",
+        "limitation": "Kênh chưa có thông tin không đồng nghĩa quỹ phủ nhận hoặc chương trình chắc chắn không tồn tại.",
+        "explanation": "Chưa tìm thấy xác nhận cho đợt tháng 10; cũng chưa có lời phủ nhận riêng cho tin này."
+      },
+      {
+        "sourceId": "src-003",
+        "role": "insufficient",
+        "limitation": "Bài chụp lại tin nhắn src-001, không có kiểm tra độc lập.",
+        "explanation": "Một bản sao không làm tăng số nguồn xác nhận."
+      },
+      {
+        "sourceId": "src-004",
+        "role": "context",
+        "limitation": "Các đợt năm trước không cho biết kế hoạch tháng 10/2026.",
+        "explanation": "Quỹ từng có học bổng nhưng lịch sử đó không xác nhận đợt mới."
+      },
+      {
+        "sourceId": "src-005",
+        "role": "insufficient",
+        "limitation": "Lượt chia sẻ đo độ lan truyền, không đo độ đúng.",
+        "explanation": "Bài đăng vẫn dựa trên cùng một tin nhắn đầu tiên."
+      },
+      {
+        "sourceId": "src-006",
+        "role": "context",
+        "limitation": "Quy trình là hướng dẫn chung, không ghi đợt học bổng tháng 10/2026.",
+        "explanation": "Nguồn chỉ cách kiểm chứng qua kênh chính thức, không kết luận tin hiện tại."
+      }
+    ],
+    "hints": [
+      "Tìm thông báo gốc trên kênh của Quỹ Cánh Diều.",
+      "Mở từng bài và xem chúng có dẫn lại cùng một tin nhắn không.",
+      "Nếu kênh chưa nói gì, điều đó cho phép và chưa cho phép kết luận điều gì?"
+    ],
+    "teacherNotes": "Cho học sinh vẽ đường dẫn src-003 và src-005 về cùng tin nhắn src-001. Đọc kênh quỹ src-002: chưa thấy thông tin nhưng không có phủ nhận riêng, nên không được suy ra “sai”. Đối chiếu quy trình src-006 và lịch sử src-004 để thấy chúng không xác nhận đợt hiện tại. Kết luận hợp lệ là chưa đủ bằng chứng; nhắc không gửi thông tin cá nhân hoặc ảnh giấy tờ khi chưa xác minh.",
+    "variantClaims": [
+      "Tin trong nhóm nói Quỹ Cánh Diều có học bổng mới tháng 10/2026; ai muốn giữ suất thì gửi thông tin cá nhân qua tin nhắn.",
+      "Có lời đồn về đợt học bổng tháng 10/2026 của Quỹ Cánh Diều, nhưng bài đăng không dẫn nguồn và đề nghị gửi thông tin cá nhân."
+    ]
+  }
+]
