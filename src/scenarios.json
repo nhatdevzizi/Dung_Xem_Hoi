@@ -120,6 +120,13 @@
       "So thời khóa biểu với thông báo mới nhất; chú ý văn bản thuộc năm nào."
     ],
     "teacherNotes": "Cho học sinh so ảnh cắt với bản lưu số 18/2025 để thấy năm bị bỏ đi, rồi đọc thông báo số 31/2026 và thời khóa biểu. Mấu chốt là thông báo hiện tại phản bác trực tiếp tin nghỉ toàn trường. Tin nhắn chuyển tiếp và bài đăng dùng lại cùng ảnh là nhiễu; số lượt chia sẻ không tạo ra nguồn độc lập.",
+    "feedback": {
+      "explanation": "Ảnh đang lan truyền là thông báo năm 2025. Thông báo mới của trường ghi ngày 02/10/2026 vẫn học bình thường, nên tin nghỉ học cho năm 2026 là sai.",
+      "questions": [
+        "Ảnh bị cắt mất năm có đủ để kết luận về lịch học năm 2026 không?",
+        "Nếu trường đăng thông báo mới cho nghỉ đúng ngày 02/10/2026, bạn sẽ đổi lựa chọn thế nào?"
+      ]
+    },
     "variantClaims": [
       "Ảnh được chuyền trong nhóm lớp nói toàn trường Học viện Sao Mai nghỉ học ngày 02/10/2026 để sửa điện. Hãy chuyển tiếp cho mọi người!",
       "Ngày 02/10/2026, tất cả học sinh Học viện Sao Mai được nghỉ vì trường sửa hệ thống điện, theo ảnh thông báo trong nhóm."
@@ -248,6 +255,13 @@
       "So buổi sáng trong lịch với lời kể trong bài đăng."
     ],
     "teacherNotes": "Đường kiểm chứng: đọc ngày hiệu lực trên lịch tháng 10 (src6), rồi so với xác nhận gần ngày diễn ra từ kênh thư viện (src1). Bài viết src4 dùng lịch tháng 9 là nhiễu có mục đích; tin nhắn và bài nhóm đọc sách đều dẫn lại lịch, không tăng số nguồn độc lập. Nhấn mạnh tuyên bố chỉ về buổi sáng 03/10.",
+    "feedback": {
+      "explanation": "Lịch tháng 10 và xác nhận từ kênh thư viện cùng ghi sáng 03/10/2026 mở 8:00–11:00. Hai nguồn đúng ngày giúp bạn tin thông tin này.",
+      "questions": [
+        "Lịch tháng 9 có thể dùng để kết luận cho sáng 03/10/2026 không?",
+        "Nếu thông báo mới nhất ghi thư viện đóng sáng 03/10, bạn sẽ đổi lựa chọn thế nào?"
+      ]
+    },
     "variantClaims": [
       "Sáng thứ Bảy 03/10/2026, thư viện Trường Sao Mai mở từ 8:00 đến 11:00 cho học sinh vào học nhóm.",
       "Nhóm đọc sách báo rằng thư viện Trường Sao Mai đón học sinh trong buổi sáng 03/10/2026, từ 8:00 đến 11:00."
@@ -378,6 +392,13 @@
       "Tìm xem bài đăng đã bỏ điều kiện nào từ thông báo đầy đủ."
     ],
     "teacherNotes": "Đọc bản đầy đủ thông báo số 42/2026 (source-1), khoanh điều kiện “khối 8 học buổi sáng”, rồi so từng hàng của thời khóa biểu (source-6). Bài đăng source-4 cắt mất dòng điều kiện; tin nhắn source-3 thêm chữ “cả trường”. Kết luận gây hiểu lầm vì phần đổi sang 9:00 có thật nhưng không áp dụng cho mọi học sinh.",
+    "feedback": {
+      "explanation": "Thông báo có đổi giờ cho khối 8 học buổi sáng, nhưng tin lan truyền lại nói cả trường. Phần phạm vi bị bỏ đi khiến tuyên bố gây hiểu lầm.",
+      "questions": [
+        "Một dòng bị cắt khỏi thông báo đã làm thay đổi phạm vi của tin như thế nào?",
+        "Nếu văn bản mới ghi mọi khối đều vào lúc 9 giờ, bạn sẽ chọn gì?"
+      ]
+    },
     "variantClaims": [
       "Từ ngày 05/10/2026, mọi khối lớp của Trường Sao Mai đều bắt đầu buổi học lúc 9:00.",
       "Bài đăng khẳng định toàn trường Sao Mai đổi giờ vào 9:00 từ thứ Hai 05/10/2026."
@@ -502,9 +523,143 @@
       "Nếu kênh chưa nói gì, điều đó cho phép và chưa cho phép kết luận điều gì?"
     ],
     "teacherNotes": "Cho học sinh vẽ đường dẫn src-003 và src-005 về cùng tin nhắn src-001. Đọc kênh quỹ src-002: chưa thấy thông tin nhưng không có phủ nhận riêng, nên không được suy ra “sai”. Đối chiếu quy trình src-006 và lịch sử src-004 để thấy chúng không xác nhận đợt hiện tại. Kết luận hợp lệ là chưa đủ bằng chứng; nhắc không gửi thông tin cá nhân hoặc ảnh giấy tờ khi chưa xác minh.",
+    "feedback": {
+      "explanation": "Nhiều bài đang chép cùng một tin nhắn, còn quỹ chưa xác nhận hoặc phủ nhận đợt mới. Chưa đủ căn cứ để chọn Tin hay Không tin.",
+      "questions": [
+        "Nhiều bài cùng dẫn một tin nhắn có tạo ra nhiều nguồn độc lập không?",
+        "Nếu quỹ đăng thông báo xác nhận hoặc phủ nhận, lựa chọn của bạn sẽ thay đổi thế nào?"
+      ]
+    },
     "variantClaims": [
       "Tin trong nhóm nói Quỹ Cánh Diều có học bổng mới tháng 10/2026; ai muốn giữ suất thì gửi thông tin cá nhân qua tin nhắn.",
       "Có lời đồn về đợt học bổng tháng 10/2026 của Quỹ Cánh Diều, nhưng bài đăng không dẫn nguồn và đề nghị gửi thông tin cá nhân."
+    ]
+  },
+  {
+    "id": "doi-vo-van-tuan-sau",
+    "title": "Thứ Hai có cần mang vở Văn?",
+    "ageBand": "12-16",
+    "learningGoal": "Tạm dừng trước lời kể của bạn, đặt câu hỏi cụ thể và xác minh trực tiếp với cô giáo khi nhóm lớp chưa có thông báo.",
+    "claim": "Bạn nhận được tin nhắn của Minh: “Tớ nhớ hôm nay cô bảo từ thứ Hai tuần sau mang vở Văn đi vì thời khóa biểu thay đổi.” Nhưng trên nhóm lớp chưa có thông báo chính thức từ cô. Nếu là bạn, bạn sẽ làm gì?",
+    "truthStatus": "verified",
+    "topic": "Thời khóa biểu",
+    "difficulty": "Dễ",
+    "sources": [
+      {
+        "id": "tkb-ban-nhan",
+        "type": "message",
+        "title": "Tin nhắn của Minh",
+        "author": "Minh, bạn cùng lớp 7A",
+        "publishedAt": "2026-09-29",
+        "content": "Minh nhắn lúc 16:05: “Tớ nhớ hôm nay cô bảo từ thứ Hai tuần sau mang vở Văn đi vì thời khóa biểu thay đổi.” Minh đang kể lại trí nhớ của mình, không gửi ảnh thời khóa biểu mới và cũng chưa hỏi lại cô. Lời nhắc có thể hữu ích nhưng chưa đủ để tự xác nhận lịch học.",
+        "citesSourceIds": [],
+        "relevanceNote": "Lời kể của bạn giúp biết điều cần kiểm tra, nhưng trí nhớ có thể nhầm ngày hoặc lớp."
+      },
+      {
+        "id": "tkb-nhom-lop",
+        "type": "social",
+        "title": "Nhóm lớp lúc 16:10",
+        "author": "Nhóm lớp 7A mô phỏng",
+        "publishedAt": "2026-09-29",
+        "content": "Khi bạn mở nhóm lớp lúc 16:10, chưa có tin nhắn chính thức nào từ cô giáo về việc đổi thời khóa biểu tuần sau. Một vài bạn hỏi nhau có cần mang vở Văn không, nhưng chưa ai đưa được lịch mới. Việc chưa thấy thông báo không có nghĩa cô chắc chắn chưa đổi lịch.",
+        "citesSourceIds": ["tkb-ban-nhan"],
+        "relevanceNote": "Sự vắng mặt của thông báo trên nhóm tại thời điểm này không chứng minh lời Minh đúng hay sai."
+      },
+      {
+        "id": "tkb-cu",
+        "type": "schedule",
+        "title": "Thời khóa biểu đang ghim",
+        "author": "Giáo viên chủ nhiệm lớp 7A",
+        "publishedAt": "2026-09-21",
+        "content": "Bản thời khóa biểu đang ghim trong nhóm được phát từ tuần trước. Theo bản này, thứ Hai có Toán và Khoa học, còn tiết Văn nằm vào thứ Ba. Cuối bảng ghi rằng cô sẽ báo lại nếu lịch tuần sau thay đổi. Vì vậy bản cũ không đủ để bác bỏ một thay đổi vừa được cô nhắc tại lớp.",
+        "citesSourceIds": [],
+        "relevanceNote": "Cho biết lịch cũ; cần hỏi lại cô về tuần bắt đầu ngày 05/10."
+      },
+      {
+        "id": "tkb-co-nhan",
+        "type": "message",
+        "title": "Cô trả lời tin nhắn",
+        "author": "Cô Hà, giáo viên chủ nhiệm lớp 7A",
+        "publishedAt": "2026-09-29",
+        "content": "Trong tình huống mô phỏng, bạn nhắn hỏi cô Hà. Cô trả lời: “Đúng rồi, từ thứ Hai 05/10 lớp 7A có tiết Văn theo thời khóa biểu mới, các em mang vở Văn. Cô đang hoàn tất bảng mới và sẽ gửi vào nhóm lớp tối nay.” Đây là xác nhận trực tiếp về ngày và lớp được hỏi.",
+        "citesSourceIds": [],
+        "relevanceNote": "Xác nhận trực tiếp từ người phụ trách lớp, đúng ngày bắt đầu và đúng lớp."
+      },
+      {
+        "id": "tkb-co-goi",
+        "type": "message",
+        "title": "Cô xác nhận qua cuộc gọi",
+        "author": "Cô Hà, giáo viên chủ nhiệm lớp 7A",
+        "publishedAt": "2026-09-29",
+        "content": "Trong tình huống mô phỏng, bạn gọi cô Hà để hỏi. Cô nói: “Từ thứ Hai 05/10, lớp 7A sẽ học Văn theo thời khóa biểu mới nên nhớ mang vở Văn. Tối nay cô gửi bảng đầy đủ lên nhóm lớp.” Câu trả lời khớp với điều cô xác nhận qua tin nhắn và nêu rõ phạm vi áp dụng.",
+        "citesSourceIds": [],
+        "relevanceNote": "Một cách hỏi trực tiếp khác; không phải nguồn độc lập với tin nhắn trả lời từ cùng cô."
+      },
+      {
+        "id": "tkb-nhom-cap-nhat",
+        "type": "official",
+        "title": "Thông báo được đăng sau đó",
+        "author": "Cô Hà, giáo viên chủ nhiệm lớp 7A",
+        "publishedAt": "2026-09-29",
+        "content": "Đến 19:00, cô Hà đăng bảng thời khóa biểu mới vào nhóm lớp 7A. Dòng thứ Hai 05/10 có tiết Văn và lời nhắc học sinh mang vở Văn. Cô ghi rõ bảng mới thay cho bản đang ghim từ tuần trước. Thông báo xuất hiện sau thời điểm bạn đọc tin của Minh, nên không thể giả định nó đã có sẵn lúc 16:10.",
+        "citesSourceIds": [],
+        "relevanceNote": "Xác nhận bằng bảng mới sau khi cô đã trả lời; cần chú ý thứ tự thời gian."
+      }
+    ],
+    "evidenceRules": [
+      {
+        "sourceId": "tkb-ban-nhan",
+        "role": "insufficient",
+        "limitation": "Minh kể lại trí nhớ, chưa có bảng mới hoặc xác nhận từ cô.",
+        "explanation": "Tin nhắn nêu điều cần hỏi nhưng chưa đủ xác nhận việc đổi tiết Văn."
+      },
+      {
+        "sourceId": "tkb-nhom-lop",
+        "role": "insufficient",
+        "limitation": "Chỉ phản ánh nhóm lúc 16:10; cô có thể đăng thông báo sau.",
+        "explanation": "Chưa thấy thông báo không cho phép kết luận lời Minh sai."
+      },
+      {
+        "sourceId": "tkb-cu",
+        "role": "context",
+        "limitation": "Bản đang ghim là lịch cũ và có thể được thay thế.",
+        "explanation": "Lịch cũ cho thấy cần xác minh thay đổi, không bác bỏ được lời cô nhắc hôm nay."
+      },
+      {
+        "sourceId": "tkb-co-nhan",
+        "role": "supports",
+        "limitation": "Cô xác nhận cho lớp 7A từ 05/10, không nói cho lớp khác.",
+        "explanation": "Cô Hà trực tiếp xác nhận từ thứ Hai lớp 7A mang vở Văn."
+      },
+      {
+        "sourceId": "tkb-co-goi",
+        "role": "supports",
+        "limitation": "Cùng một người xác nhận; cuộc gọi và tin nhắn không phải hai nguồn độc lập.",
+        "explanation": "Cuộc gọi với cô Hà xác nhận đúng ngày, lớp và môn Văn."
+      },
+      {
+        "sourceId": "tkb-nhom-cap-nhat",
+        "role": "supports",
+        "limitation": "Thông báo xuất hiện sau lúc bạn đọc tin ban đầu.",
+        "explanation": "Bảng mới trên nhóm lớp khớp với câu trả lời trực tiếp của cô."
+      }
+    ],
+    "hints": [
+      "Đọc đúng lời Minh: bạn ấy đang nhớ lại hay đưa thông báo gốc?",
+      "Chưa thấy tin trên nhóm lúc này có nghĩa là lịch chắc chắn không đổi không?",
+      "Hỏi cô về ngày bắt đầu, lớp áp dụng và môn cần mang vở."
+    ],
+    "teacherNotes": "Cho học sinh bắt đầu từ tin nhắn của Minh và nhóm lớp lúc 16:10. Hai nguồn này chỉ gợi câu hỏi, chưa xác nhận hoặc phủ nhận thay đổi. Học sinh chọn một câu hỏi rõ ràng rồi mô phỏng nhắn tin hoặc gọi cô Hà; cả hai cách đều dẫn đến xác nhận cho lớp 7A từ thứ Hai 05/10. Thông báo lúc 19:00 là bằng chứng đến sau, củng cố câu trả lời. Nhấn mạnh không suy ra tin sai chỉ vì nhóm chưa đăng, đồng thời không tính hai lời cùng cô là hai nguồn độc lập.",
+    "feedback": {
+      "explanation": "Lúc đầu nhóm lớp chưa thông báo, nên lời Minh chỉ là điều cần hỏi. Sau đó cô Hà xác nhận trực tiếp và đăng bảng mới cho lớp 7A từ 05/10.",
+      "questions": [
+        "Việc nhóm chưa đăng lúc 16:10 có chứng minh Minh nhớ sai không?",
+        "Nếu cô chưa trả lời và bảng mới chưa xuất hiện, bạn sẽ giữ Tin hay chuyển sang Chưa chắc?"
+      ]
+    },
+    "variantClaims": [
+      "Minh nhắn: “Hình như từ thứ Hai 05/10 lớp mình mang vở Văn vì cô đổi thời khóa biểu.” Nhóm lớp chưa thấy cô đăng lịch mới.",
+      "Một bạn nhớ cô vừa dặn lớp 7A mang vở Văn từ thứ Hai tuần sau, nhưng bạn chưa thấy thông báo trong nhóm lớp."
     ]
   }
 ]

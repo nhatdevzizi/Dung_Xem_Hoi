@@ -1,8 +1,11 @@
 export type TruthStatus = 'verified' | 'false' | 'misleading' | 'insufficient'
-export type SourceType = 'official' | 'message' | 'image' | 'article' | 'schedule' | 'social'
+export type Belief = 'believe' | 'unsure' | 'disbelieve'
+export type ReasonChoice = 'enough' | 'missing' | 'unclear' | 'outdated'
+export type ContactMethod = 'message' | 'call'
+export type Stage = 'stop' | 'reason' | 'evidence' | 'conclude' | 'feedback'
+export type SchoolLevel = 'primary' | 'middle' | 'high'
+export type SourceType = 'official' | 'message' | 'image' | 'article' | 'schedule' | 'social' | 'video' | 'legal'
 export type EvidenceRole = 'supports' | 'refutes' | 'context' | 'insufficient'
-export type InitialAction = 'share' | 'wait' | 'ask'
-export type Stage = 'stop' | 'explore' | 'conclude' | 'feedback'
 
 export interface Source {
   id: string
@@ -24,6 +27,7 @@ export interface EvidenceRule {
 
 export interface Scenario {
   id: string
+  schoolLevel: SchoolLevel
   title: string
   ageBand: string
   learningGoal: string
@@ -36,31 +40,21 @@ export interface Scenario {
   hints: string[]
   teacherNotes: string
   variantClaims: string[]
-}
-
-export interface Answer {
-  status: TruthStatus
-  sourceIds: string[]
-  reasoning: string
-  limitation: string
-  finalAction: InitialAction
+  feedback: {
+    explanation: string
+    questions: [string, string]
+  }
 }
 
 export interface GameSession {
   scenarioId: string
   variantIndex: number
   stage: Stage
-  initialAction: InitialAction | null
-  initialReason: string
-  viewedSourceIds: string[]
-  notebookSourceIds: string[]
-  hintCount: number
-  draft: {
-    status: TruthStatus | null
-    sourceIds: string[]
-    reasoning: string
-    limitation: string
-    finalAction: InitialAction
-  }
-  answer: Answer | null
+  initialBelief: Belief | null
+  reasonChoice: ReasonChoice | null
+  questionChoice: string | null
+  contactMethod: ContactMethod | null
+  revealedSourceIds: string[]
+  finalBelief: Belief | null
+  reflection: string
 }
