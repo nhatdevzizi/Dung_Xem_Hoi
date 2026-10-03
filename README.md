@@ -2,6 +2,12 @@
 
 Trò chơi mô phỏng giúp học sinh kiểm chứng thông tin qua lựa chọn. **Mọi nhân vật, tin nhắn, trường và tài liệu trong game đều là hư cấu.** Không cần tài khoản, cơ sở dữ liệu hoặc khóa API.
 
+## Thiết kế màu sắc
+
+Mèo Wecheck là điểm nhận diện chính. Màu cam của nhân vật đi cùng xanh dương cho điều hướng, xanh ngọc cho bước kiểm chứng và vàng cho lời mời bắt đầu. Nền đọc và các tài liệu giữ màu sáng, ít trang trí để nội dung dễ theo dõi. Màu được dùng cùng chữ và trạng thái, không phải tín hiệu duy nhất cho một lựa chọn.
+
+Cách dùng màu dựa trên nghiên cứu về việc trang trí thị giác quá nhiều có thể phân tán sự chú ý của trẻ nhỏ ([Fisher và cộng sự, 2014](https://pubmed.ncbi.nlm.nih.gov/24855019/)) và hướng dẫn dùng màu để xác định chức năng trong không gian học tập ([D.C. Public Schools, 1972](https://files.eric.ed.gov/fulltext/ED119340.pdf)). Không có bằng chứng rằng một sắc màu riêng lẻ luôn cải thiện việc học. Chữ và nền được chọn theo ngưỡng tương phản WCAG 2.2 AA ([W3C](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)).
+
 ## Chạy và kiểm tra
 
 Cần Node.js 20.19+ hoặc 22.12+ và npm:
@@ -26,7 +32,7 @@ Mở địa chỉ Vite in ra trong terminal, thường là `http://localhost:517
 
 Ở màn **Thứ Hai có cần mang vở Văn?**, một người bạn nhớ cô dặn mang vở Văn từ thứ Hai tuần sau, nhưng nhóm lớp chưa có thông báo. Học sinh chọn câu cần hỏi, rồi mô phỏng **nhắn tin hỏi cô** hoặc **gọi điện hỏi cô**. Phản hồi trực tiếp được mở sau hành động đó; thông báo trên nhóm xuất hiện muộn hơn. Game không gửi tin nhắn hay thực hiện cuộc gọi thật.
 
-Tiến trình lưu trong `localStorage` của trình duyệt. Nút **Xóa phiên** xóa tiến trình. App không thu thập danh tính, tin nhắn thật hoặc thông tin cá nhân.
+Tiến trình lưu trong `localStorage` của trình duyệt. App chỉ lưu một phiên đang chơi, không lưu điểm hoàn thành riêng cho từng màn. Nút **Xóa phiên** xóa phiên đó; **Đặt lại tất cả màn** xóa phiên đã lưu và đưa cấp học về THCS. App không thu thập danh tính, tin nhắn thật hoặc thông tin cá nhân.
 
 ## Dữ liệu và chấm điểm
 

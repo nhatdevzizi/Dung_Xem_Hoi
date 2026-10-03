@@ -116,6 +116,21 @@ export function newSession(scenarioId: string, variantIndex = -1): GameSession {
   }
 }
 
+/** Clear the current learning step and answers that depend on it. */
+export function resetStage(session: GameSession): GameSession {
+  if (session.stage === 'stop') return newSession(session.scenarioId, session.variantIndex)
+  if (session.stage === 'reason') return {
+    ...session, reasonChoice: null, questionChoice: null, contactMethod: null,
+    revealedSourceIds: [], finalBelief: null, reflection: '',
+  }
+  if (session.stage === 'evidence') return {
+    ...session, questionChoice: null, contactMethod: null,
+    revealedSourceIds: [], finalBelief: null, reflection: '',
+  }
+  if (session.stage === 'conclude') return { ...session, finalBelief: null, reflection: '' }
+  return session
+}
+
 export function expectedBelief(status: TruthStatus): Belief {
   if (status === 'verified') return 'believe'
   if (status === 'insufficient') return 'unsure'

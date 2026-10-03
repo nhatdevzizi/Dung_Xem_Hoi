@@ -3,7 +3,7 @@ import { SCHOOL_LEVELS, chooseCatalogLevel, scenarios as allScenarios, scenarios
 import {
   SCHEDULE_SCENARIO_ID, QUESTION_OPTIONS, canAdvance, evaluate, evidenceOptions,
   expectedBelief, independentSources, newSession, requestEvidence, validateScenario,
-  reasonOptions, chooseInitialBelief,
+  reasonOptions, chooseInitialBelief, resetStage,
 } from '../src/logic.ts'
 
 const scenarios = scenariosForLevel('middle')
@@ -152,6 +152,24 @@ game = { ...game, stage: 'conclude', finalBelief: 'disbelieve' }
 assert.equal(canAdvance(game), false, 'The one final reflection is required')
 game = { ...game, reflection: 'Nguồn này chưa ghi rõ ngày và người nói.' }
 assert.equal(canAdvance(game), true)
+
+const answered = { ...game, questionChoice: QUESTION_OPTIONS[0], contactMethod: 'message' }
+const restartConclusion = resetStage(answered)
+assert.equal(restartConclusion.initialBelief, 'unsure')
+assert.deepEqual(restartConclusion.revealedSourceIds, [genericOption.sourceId])
+assert.equal(restartConclusion.finalBelief, null)
+assert.equal(restartConclusion.reflection, '')
+const restartEvidence = resetStage({ ...answered, stage: 'evidence' })
+assert.equal(restartEvidence.reasonChoice, 'unclear')
+assert.deepEqual(restartEvidence.revealedSourceIds, [])
+assert.equal(restartEvidence.contactMethod, null)
+assert.equal(restartEvidence.finalBelief, null)
+assert.equal(canAdvance(restartEvidence), false)
+const restartReason = resetStage({ ...answered, stage: 'reason' })
+assert.equal(restartReason.initialBelief, 'unsure')
+assert.equal(restartReason.reasonChoice, null)
+assert.deepEqual(restartReason.revealedSourceIds, [])
+assert.deepEqual(resetStage({ ...answered, stage: 'stop' }), newSession(generic.id))
 
 assert.equal(expectedBelief('verified'), 'believe')
 assert.equal(expectedBelief('insufficient'), 'unsure')

@@ -76,3 +76,196 @@ p{line-height:1.62}
 @media(max-width:680px){.belief-choices{grid-template-columns:1fr}.evidence-option{align-items:flex-start;flex-direction:column}.evidence-option small{white-space:normal}.step-actions{flex-direction:column}.step-actions button{width:100%}.stepper li{font-size:9px}.stepper li span{width:22px;height:22px}}
 @media(max-width:900px){.hero{padding:40px;grid-template-columns:1fr .45fr}.art-card-front{right:55px}.art-card-back{right:0}.game-layout,.research-layout,.teacher-grid{grid-template-columns:1fr}.conclusion-layout,.feedback-layout{grid-template-columns:minmax(0,1fr) 250px}.research-side{grid-template-columns:1fr 1fr}.document-panel{grid-column:1/-1}.source-library{max-height:none}.school-levels{gap:9px}.school-level{padding:14px}}
 @media(max-width:680px){main{width:min(100% - 28px,1184px)}.header-inner{padding:14px;display:block}.brand{font-size:17px}.top-nav{margin-top:11px}.top-nav button{font-size:12px;padding:7px 9px}.mode-strip{font-size:11px}.mode-muted{width:100%}.hero{display:block;padding:34px 25px;min-height:unset}.hero-art{display:none}.hero-copy{font-size:15px}.section-heading{display:block;padding-top:35px}.section-heading p:last-child{margin-top:9px}.school-levels{grid-template-columns:1fr}.school-level{min-height:unset}.level-name{font-size:23px}.scenario-grid{grid-template-columns:1fr}.scenario-card{min-height:unset}.game-heading{align-items:start}.game-heading .quiet-button{font-size:12px;padding:9px}.stepper{gap:2px}.stepper li{font-size:10px;display:block}.stepper li span{margin-bottom:6px}.panel{padding:19px}.research-side,.conclusion-layout,.feedback-layout{grid-template-columns:1fr}.document-panel{grid-column:auto}.filter-row{grid-template-columns:1fr}.filter-box select{min-height:43px}.explore-intro{align-items:start}.count-badge{min-width:85px}.status-choices{grid-template-columns:1fr}.form-actions,.next-bar,.resume-panel{flex-direction:column;align-items:stretch}.form-actions button,.next-bar button{width:100%}.comparison{grid-template-columns:1fr}.teacher-picker{display:block}.teacher-picker select{display:block;width:100%;margin-top:8px}.teacher-grid dl{grid-template-columns:1fr;gap:4px}.teacher-grid dd{margin-bottom:10px}.site-footer{display:block}.site-footer p{text-align:left;margin-top:8px}}
+
+/* Wecheck's learning palette: a calm reading surface and bright, purposeful cues. */
+:root{--ink:#17345f;--blue:#3159d9;--blue-dark:#2447b4;--teal:#0b7469;--orange:#ad4618;--yellow:#ffce55;--line:#d8e5f2;--paper:#fff;--surface:#f6faff;--font-vietnamese:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-family:var(--font-vietnamese);font-size:16px;line-height:1.6;color:var(--ink);background:var(--surface)}
+body{background:var(--surface)}
+:focus-visible{outline-color:#2447b4}
+h1,h2,h3,.brand,.level-name,.card-number,.count-badge strong,.score-badge strong,.site-footer>span{font-family:inherit;letter-spacing:-.02em;line-height:1.25;color:var(--ink)}
+.site-header{background:#fff;color:var(--ink);border-bottom:1px solid var(--line);box-shadow:0 3px 18px #17345f0a}
+.header-inner{padding-top:11px;padding-bottom:11px}
+.brand{color:var(--ink);font-size:19px;letter-spacing:-.045em}
+.brand b{color:#e87932}
+.brand-symbol{width:46px;height:46px;overflow:hidden;background:#fff2d3;border:2px solid #ffd888;flex:none}
+.brand-symbol img{width:122%;height:122%;object-fit:contain;max-width:none;transform:translate(-6%,-7%)}
+.top-nav button{color:#365276;border-radius:999px;min-height:44px;padding:10px 16px}
+.top-nav button:hover,.top-nav .nav-active{background:#e6edff;color:var(--blue-dark)}
+.mode-strip{padding:17px 0;color:#476078}
+.mode-pill{background:#ddf4ef;color:#075c54}
+.live-dot{background:#0b7469}
+.mode-muted{color:#526780}
+.eyebrow{color:var(--orange);letter-spacing:.08em}
+.notice{background:#fff2dc;border-color:#f4b553;color:#753b10}
+.hero{background:#345cdb;grid-template-columns:minmax(0,1.18fr) minmax(290px,.82fr);border-radius:28px;padding:50px 54px;min-height:440px;isolation:isolate}
+.hero:before{content:'';position:absolute;width:620px;height:620px;border-radius:50%;right:-180px;top:-280px;background:#4264d5;z-index:-1}
+.hero:after{content:'';position:absolute;width:420px;height:420px;border-radius:50%;right:140px;bottom:-355px;background:#2447bd;z-index:-1}
+.hero h1{color:#fff;font-size:clamp(38px,4.3vw,58px);line-height:1.24;max-width:700px}
+.hero h1 em{font-style:normal;color:#ffda70}
+.hero .eyebrow{color:#fff0b2}
+.hero-copy{color:#fff;font-size:17px;line-height:1.65;margin:20px 0 23px;max-width:560px}
+.hero-cta{background:var(--yellow);color:#24385d;border:2px solid #ffd76c;border-radius:14px;display:inline-flex;align-items:center;gap:20px;min-height:48px;padding:10px 17px;font-weight:800;text-decoration:none;box-shadow:0 5px 0 #193da9}
+.hero-cta:hover{background:#ffe18a;transform:translateY(-2px)}
+.hero-cta span{font-size:21px;line-height:1}
+.hero-badges{margin-top:23px}
+.hero-badges span{color:#fff;background:#ffffff1c;border-color:#ffffff8a;font-size:12px}
+.hero-art{height:330px;display:grid;place-items:center;align-self:center;position:relative}
+.hero-art img{display:block;width:min(100%,390px);height:auto;position:relative;z-index:2;filter:drop-shadow(0 22px 8px #18399653)}
+.hero-orbit{position:absolute;display:grid;place-items:center;border-radius:50%;z-index:1;font-weight:900;color:#17345f}
+.hero-orbit-one{width:64px;height:64px;background:#ffda70;top:10px;left:0;font-size:37px;transform:rotate(-14deg)}
+.hero-orbit-two{width:54px;height:54px;background:#a6eee4;right:10px;bottom:35px;font-size:27px;transform:rotate(12deg)}
+.mascot-caption{position:absolute;z-index:3;bottom:-4px;right:22px;background:#fff;color:var(--ink);border-radius:999px;padding:7px 14px;font-weight:800;font-size:12px;box-shadow:0 5px 0 #1d40a9}
+.section-heading p:last-child{color:#455c76}
+.level-heading{scroll-margin-top:20px}
+.school-level{background:#fff;border-color:var(--line);border-radius:20px;box-shadow:0 6px 0 #e3eaf4;padding:20px;min-height:190px}
+.school-level:nth-of-type(1){--level-accent:#f2a639;border-top:7px solid var(--level-accent)}
+.school-level:nth-of-type(2){--level-accent:#2badd0;border-top:7px solid var(--level-accent)}
+.school-level:nth-of-type(3){--level-accent:#48b697;border-top:7px solid var(--level-accent)}
+.school-level:hover{border-color:#93b2f4;border-top-color:var(--level-accent);background:#f3f7ff;box-shadow:0 8px 0 #d6e2f5;transform:translateY(-2px)}
+.school-level.selected{border-color:var(--blue);border-top-color:var(--level-accent);background:#edf2ff;box-shadow:0 6px 0 #b8c8fb}
+.school-level strong{color:var(--orange)}
+.level-description{color:#4b6179;font-size:15px;line-height:1.6}
+.level-count{color:var(--blue-dark)}
+.scenario-grid{gap:20px}
+.scenario-grid[data-level="primary"]{--scenario-accent:#f2a639}
+.scenario-grid[data-level="middle"]{--scenario-accent:#2badd0}
+.scenario-grid[data-level="high"]{--scenario-accent:#48b697}
+.scenario-card{background:#fff;border:1px solid var(--line);border-top:6px solid var(--scenario-accent);border-radius:18px;box-shadow:0 7px 0 #e6edf7;min-height:282px}
+.scenario-card:hover{border-color:#91ace8;border-top-color:var(--scenario-accent);box-shadow:0 10px 0 #dfe8fa;transform:translateY(-3px)}
+.card-number{color:var(--blue);font-size:25px}
+.tag{background:#e9f0ff;border-color:#c4d2ff;color:var(--blue-dark)}
+.card-topic{color:#596a83}
+.scenario-card>p:not(.card-topic){color:#496079;font-size:15px;line-height:1.6}
+.primary-button{background:var(--blue);border-color:var(--blue-dark);color:#fff;min-height:44px}
+.primary-button:hover{background:var(--blue-dark)}
+.secondary-button{background:#fff;border-color:#9ab3e6;color:var(--blue-dark);min-height:44px}
+.secondary-button:hover{background:#edf2ff}
+.quiet-button{color:var(--blue-dark);border-color:#9ab3e6;min-height:44px}
+.quiet-button:hover{background:#edf2ff}
+.text-button{color:var(--blue-dark)}
+.text-button:hover{color:#122e83}
+.resume-panel{background:#e8f4fb;border-color:#88bed6}
+.game-heading-actions{display:flex;align-items:center;gap:12px}
+.game-mascot{width:75px;height:60px;object-fit:contain}
+.stepper li{border-color:#ccdaee;color:#526986}
+.stepper li span{background:#deebfa;color:#35547d}
+.stepper li.current{color:var(--blue-dark);border-color:var(--blue)}
+.stepper li.current span{background:var(--blue);color:#fff}
+.stepper li.done{color:var(--teal);border-color:#2da88f}
+.stepper li.done span{background:var(--teal);color:#fff}
+.panel{background:#fff;border-color:var(--line);box-shadow:0 6px 0 #e7edf7}
+.story-panel,.hint-panel,.rubric-panel,.result-panel{background:#eaf2ff}
+.fake-post{border-color:#cadcf3;box-shadow:0 8px 0 #d8e6f6}
+.fake-post>p,.document-content{color:var(--ink)}
+.choice.selected,.status-choice.selected{border-color:var(--blue);background:#eaf0ff;box-shadow:inset 0 0 0 1px var(--blue)}
+.choice input,.status-choice input,.source-checkbox input,.final-action input{accent-color:var(--blue)}
+.count-badge,.citation-note,.claim-reminder,.source-note,.asked-question{background:#e4f5f2;color:#075c54}
+.source-row:hover,.source-row.active,.evidence-option:hover,.evidence-option.opened{border-color:#0b7469;background:#e7f5f2}
+.source-icon{background:#d9f1ec;color:#0b7469}
+.evidence-option,.source-row{color:var(--ink)}
+.evidence-option small,.source-meta,.used-label{color:var(--orange)}
+.next-bar,.score-badge,.site-footer{background:#173c80;color:#fff}
+.site-footer>span{color:#fff}
+.site-footer p{color:#e8efff}
+.result-incorrect{background:#fff1e8}
+.role-supports{color:#12603c}.role-refutes{color:#9b3e25}
+.teacher-heading p:last-child,.teacher-grid dt,.teacher-validation{color:#48627e}
+.eyebrow{font-size:13px;line-height:1.55;letter-spacing:.04em}
+.top-nav button,.primary-button,.secondary-button,.quiet-button,.text-button{font-size:14px;line-height:1.4}
+.school-level strong{font-size:15px}
+.level-count,.tag,.card-topic{font-size:13px;line-height:1.5}
+.school-level .level-name{font-size:24px;line-height:1.3}
+.scenario-card h3{font-size:23px;line-height:1.3}
+.field-label,.choice,.status-choice,.evidence-option,.source-row strong{font-size:15px;line-height:1.5}
+.post-author small,.source-row small,.document-byline,.source-note,.asked-question,.teacher-rules p,.teacher-rules small{font-size:13px;line-height:1.55}
+.next-bar span,.hint-panel li,.rubric-panel li,.rule-card p,.reflection-panel p{font-size:14px;line-height:1.6}
+.panel textarea,.panel select,.panel input[type=search],.teacher-picker select{font-size:16px;line-height:1.55}
+body,button,input,select,textarea,h1,h2,h3,.brand,.eyebrow,.art-card,.level-name,.card-number,.count-badge strong,.score-badge strong,.site-footer>span{font-family:var(--font-vietnamese)}
+.choice,.status-choice,.source-checkbox,.evidence-option,.school-level,.source-row,.teacher-picker select{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+@media(hover:hover){
+  .choice:hover:not(.selected),.status-choice:hover:not(.selected),.source-checkbox:hover{border-color:var(--blue);background:#f3f7ff;box-shadow:0 3px 0 #dbe5fb}
+  .choice.selected:hover,.status-choice.selected:hover{background:#dce8ff}
+  .evidence-option:hover:not(.opened),.source-row:hover:not(.active){transform:translateY(-2px);box-shadow:0 4px 0 #d7ebe8}
+  .teacher-picker select:hover,.panel textarea:hover,.panel select:hover,.panel input[type=search]:hover{border-color:var(--blue)}
+}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr) 250px;padding:40px}.hero-art{height:270px}.hero-art img{width:290px}.mascot-caption{right:-4px}}
+@media(max-width:680px){.header-inner{display:flex;flex-direction:column;align-items:flex-start;gap:5px}.brand{font-size:17px}.brand-symbol{width:40px;height:40px}.top-nav{margin-top:4px;gap:2px;width:100%}.top-nav button{font-size:12px;padding:8px 10px;min-height:42px}.mode-strip{font-size:12px}.hero{display:flex;flex-direction:column;align-items:stretch;gap:4px;padding:34px 24px 28px}.hero h1{font-size:clamp(34px,9vw,49px)}.hero-art{display:grid;height:230px;align-self:center;width:min(100%,340px)}.hero-art img{width:270px;max-width:100%}.hero-orbit-one{left:0}.hero-orbit-two{right:0;bottom:20px}.mascot-caption{bottom:0;right:8px}.hero-badges{margin-top:21px}.hero-badges span{font-size:11px}.school-level{min-height:unset}.game-mascot{display:none}.stepper{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}.stepper li{font-size:10px;word-break:normal}.stepper li span{margin-bottom:7px}.scenario-card{min-height:unset}.site-footer p{color:#e8efff}}
+@media(prefers-reduced-motion:reduce){.hero-cta:hover,.scenario-card:hover,.school-level:hover,.evidence-option:hover,.source-row:hover{transform:none}.hero-cta,.scenario-card,.choice,.status-choice,.source-checkbox,.evidence-option,.school-level,.source-row,.teacher-picker select{transition:none}}
+@media(max-width:680px){.top-nav button{font-size:13px}.school-level .level-name{font-size:23px}.stepper li{font-size:11px;line-height:1.35}}
+
+/* Learning flow: one clear task at a time, with a stable place to restart it. */
+.scenario-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.scenario-card{min-height:270px;padding:22px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.scenario-card .card-top{margin-bottom:10px}
+.scenario-card .card-topic{margin:0 0 5px;font-weight:750;color:#3b5677}
+.scenario-card h3{font-size:21px;margin-bottom:9px}
+.scenario-card>p:not(.card-topic){margin-bottom:22px}
+.scenario-card .card-actions{gap:12px}
+.scenario-card .primary-button{padding-inline:14px}
+.game-heading{padding:26px 28px;margin-top:8px;background:#eaf1ff;border:1px solid #d7e3fc;border-radius:22px;align-items:center}
+.game-heading h1{font-size:clamp(28px,3.4vw,42px)}
+.game-heading .eyebrow{margin-bottom:5px}
+.game-subtitle{margin:8px 0 0;color:#44617f;font-size:14px}
+.game-heading-actions{align-self:stretch}
+.game-mascot{width:96px;height:76px}
+.stepper{margin:22px 0 0;gap:8px}
+.stepper li{min-width:0;border-top-width:5px;padding:10px 2px;font-size:12px}
+.stepper li span{flex:none}
+.stage-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:10px 0 22px;padding:20px 24px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 5px 0 #e7edf7}
+.stage-summary{display:flex;align-items:center;gap:18px;min-width:0}
+.stage-count{flex:none;display:grid;place-items:center;min-width:82px;min-height:57px;padding:8px 10px;border-radius:12px;background:#e4f5f2;color:#075c54;font-size:13px;font-weight:800;text-align:center}
+.stage-summary h2{font-size:22px}
+.stage-summary p{margin:3px 0 0;color:#526982;font-size:14px;line-height:1.45}
+.reset-stage-button{flex:none;min-height:44px;border:1px solid #9cb3e7;border-radius:11px;padding:9px 15px;background:#fff;color:#2547a7;font-weight:750;font-size:14px;transition:background-color .16s ease,border-color .16s ease,transform .16s ease}
+.reset-stage-button:hover:not(:disabled){background:#eaf0ff;border-color:#3159d9;transform:translateY(-1px)}
+.reset-stage-button:disabled{opacity:.48}
+.game-layout,.evidence-layout{gap:16px}
+.single-step{max-width:800px}
+.decision-panel{display:flex;flex-direction:column}
+.decision-panel .full-button{margin-top:auto}
+.story-panel{background:#f0f5ff}
+.fake-post{background:#fff;border-radius:15px}
+.panel{padding:26px}
+.panel h2{font-size:clamp(24px,2.6vw,31px)}
+.evidence-count{display:inline-flex;align-items:center;margin:5px 0 0!important;padding:6px 11px;border-radius:999px;background:#e4f5f2;color:#075c54!important;font-size:13px;font-weight:800}
+.evidence-option.opened{border-left:4px solid #0b7469}
+.step-actions{border-top:1px solid #e2eaf4;padding-top:20px}
+.teacher-heading{padding:24px 28px;border-radius:20px;background:#eaf1ff;border:1px solid #d7e3fc}
+.teacher-heading h1{font-size:clamp(32px,4vw,48px)}
+.teacher-heading p:last-child{margin-bottom:0}
+@media(max-width:1050px){.scenario-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){
+  .scenario-grid{grid-template-columns:1fr}
+  .game-heading{padding:19px;align-items:flex-start}
+  .game-heading-actions{align-self:flex-start}
+  .game-heading-actions .quiet-button{min-width:90px}
+  .game-subtitle{font-size:13px}
+  .stepper{gap:5px;margin-top:18px}
+  .stepper li{font-size:0;line-height:0;padding:0;min-height:7px;border-top-width:7px}
+  .stepper li span{display:none}
+  .stage-toolbar{align-items:stretch;flex-direction:column;gap:14px;margin:8px 0 18px;padding:17px}
+  .stage-summary{gap:12px}
+  .stage-count{min-width:69px;min-height:54px;font-size:12px}
+  .stage-summary h2{font-size:20px}
+  .stage-summary p{font-size:13px}
+  .reset-stage-button{align-self:flex-start}
+  .panel{padding:19px}
+  .teacher-heading{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){.scenario-card,.reset-stage-button{transition:none}.reset-stage-button:hover:not(:disabled){transform:none}}
+
+/* Score card uses a light surface so every value stays legible. */
+.score-badge{min-width:116px;padding:14px 13px;background:#fff2c6;border:2px solid #e1ac35;border-radius:15px;color:#17345f;box-shadow:0 4px 0 #e8d9ad}
+.score-badge strong{color:#17345f;font-size:36px;line-height:1.05;letter-spacing:-.04em}
+.score-badge small{color:#3b587b;font-size:16px;font-weight:750}
+.score-badge span{display:block;margin-top:7px;color:#23486b;font-size:12px;font-weight:750;line-height:1.4}
+@media(max-width:680px){.result-head{flex-direction:column}.score-badge{align-self:flex-start}}
+
+.catalog-progress{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 22px;padding:16px 19px;background:#eaf2ff;border:1px solid #cbdcf6;border-radius:15px}
+.catalog-progress strong{display:block;color:var(--ink);font-size:15px}
+.catalog-progress p{margin:3px 0 0;color:#49627f;font-size:13px;line-height:1.5}
+.catalog-progress-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.reset-all-button{min-height:44px;padding:9px 14px;border:1px solid #c28c57;border-radius:9px;background:#fff8ed;color:#7b4219;font-size:14px;font-weight:750;transition:background-color .16s ease,border-color .16s ease}
+.reset-all-button:hover:not(:disabled){background:#ffedcf;border-color:#a96123}
+.reset-all-button:disabled{opacity:.48}
+@media(max-width:680px){.catalog-progress,.catalog-progress-actions{align-items:stretch;flex-direction:column}.catalog-progress-actions button{width:100%}}
+@media(prefers-reduced-motion:reduce){.reset-all-button{transition:none}}

@@ -3,15 +3,23 @@ import { SCHOOL_LEVELS, chooseCatalogLevel, levelForScenario, scenarios, scenari
 import {
   BELIEF_LABELS, QUESTION_OPTIONS, SCHEDULE_SCENARIO_ID,
   SOURCE_TYPE_LABELS, STATUS_LABELS, canAdvance, chooseInitialBelief, evaluate, evidenceOptions,
-  expectedBelief, newSession, reasonOptions, requestEvidence, validateScenario,
+  expectedBelief, newSession, reasonOptions, requestEvidence, resetStage, validateScenario,
 } from './logic'
 import type { Belief, GameSession, ReasonChoice, SchoolLevel, Stage } from './types'
+import mascotUrl from './assets/meo-wecheck.svg'
 
 const STORAGE_KEY = 'dung-xem-hoi-demo-session-v2'
 const LEVEL_STORAGE_KEY = 'dung-xem-hoi-demo-school-level-v1'
 const LEGACY_STORAGE_KEY = 'dung-xem-hoi-demo-session-v1'
 const STAGES: Stage[] = ['stop', 'reason', 'evidence', 'conclude', 'feedback']
 const STAGE_LABELS = ['Dừng', 'Vì sao?', 'Tìm bằng chứng', 'Quyết định lại', 'Phản hồi']
+const STAGE_TASKS = [
+  'Bạn nghĩ gì khi vừa đọc tin?',
+  'Điều gì khiến bạn nghĩ như vậy?',
+  'Mở nguồn và xem thông tin có thể kiểm tra.',
+  'Dựa vào bằng chứng để chọn lại và giải thích.',
+  'Xem kết quả và rút ra điều cần nhớ.',
+]
 const BELIEF_ORDER: Belief[] = ['believe', 'unsure', 'disbelieve']
 const REASON_ORDER: ReasonChoice[] = ['enough', 'missing', 'unclear', 'outdated']
 
@@ -93,9 +101,15 @@ function App() {
   const activeSource = scenario && session
     ? scenario.sources.find(source => source.id === (activeSourceId ?? session.revealedSourceIds.at(-1))) : null
   const evaluation = scenario && session?.stage === 'feedback' ? evaluate(scenario, session) : null
+  const stageIndex = session ? STAGES.indexOf(session.stage) : 0
+  const canResetStage = session && (session.stage === 'stop' ? session.initialBelief !== null
+    : session.stage === 'reason' ? session.reasonChoice !== null
+    : session.stage === 'evidence' ? session.questionChoice !== null || session.contactMethod !== null || session.revealedSourceIds.length > 0
+    : session.stage === 'conclude' ? session.finalBelief !== null || session.reflection.length > 0 : false)
 
   function update(patch: Partial<GameSession>) {
     setSession(previous => previous ? { ...previous, ...patch } : null)
+    setNotice('')
   }
 
   function startScenario(id: string, variantIndex = -1) {
@@ -113,6 +127,29 @@ function App() {
     setPage('catalog')
     setActiveSourceId(null)
     setNotice('Đã xóa phiên chơi trong trình duyệt này.')
+  }
+
+  function resetAllTasks() {
+    setSession(null)
+    setSelectedLevel('middle')
+    setTeacherScenarioId(scenariosForLevel('middle')[0]?.id ?? '')
+    setPage('catalog')
+    setActiveSourceId(null)
+    try {
+      localStorage.removeItem(STORAGE_KEY)
+      localStorage.removeItem(LEVEL_STORAGE_KEY)
+      localStorage.removeItem(LEGACY_STORAGE_KEY)
+      setNotice('Đã đặt lại toàn bộ tiến trình và cấp học đã chọn trên trình duyệt này.')
+    } catch {
+      setNotice('Đã đặt lại màn chơi hiện tại, nhưng trình duyệt không cho xóa tiến trình đã lưu.')
+    }
+  }
+
+  function resetCurrentStage() {
+    if (!session || !canResetStage) return
+    setSession(previous => previous ? resetStage(previous) : null)
+    setActiveSourceId(null)
+    setNotice('Đã làm lại bước này. Các câu trả lời ở bước sau cũng được xóa để bạn chọn lại.')
   }
 
   function advance() {
@@ -150,7 +187,7 @@ function App() {
   return <div className="app-shell">
     <header className="site-header"><div className="header-inner">
       <button className="brand" type="button" onClick={() => setPage('catalog')} aria-label="Về danh sách màn chơi">
-        <span className="brand-symbol" aria-hidden="true">✳</span><span>DỪNG <b>·</b> XEM <b>·</b> HỎI</span>
+        <span className="brand-symbol"><img src={mascotUrl} alt="" /></span><span>Dừng <b>·</b> Xem <b>·</b> Hỏi</span>
       </button>
       <nav className="top-nav" aria-label="Điều hướng chính">
         <button className={page === 'catalog' ? 'nav-active' : ''} type="button" onClick={() => setPage('catalog')}>Chọn màn</button>
@@ -164,12 +201,13 @@ function App() {
       {notice && <div className="notice" role="alert">{notice}</div>}
 
       {page === 'catalog' && <>
-        <section className="hero"><div><p className="eyebrow">TRÒ CHƠI KIỂM CHỨNG THÔNG TIN</p>
-          <h1>Dừng lại.<br /><em>Hỏi cho rõ.</em></h1>
+        <section className="hero"><div className="hero-content"><p className="eyebrow">TRÒ CHƠI KIỂM CHỨNG THÔNG TIN</p>
+          <h1>Thấy một tin lạ?<br /><em>Cùng Mèo Wecheck tìm hiểu!</em></h1>
           <p className="hero-copy">Một tin nhắn nghe rất thật. Bạn sẽ tin, chưa chắc hay không tin? Chọn điều cần hỏi, xem bằng chứng rồi quyết định lại.</p>
+          <a className="hero-cta" href="#chon-cap-hoc">Chọn cấp học để bắt đầu <span aria-hidden="true">↓</span></a>
           <div className="hero-badges"><span>12 màn mỗi cấp học</span><span>Chỉ viết một câu ở cuối</span><span>Tiến trình lưu trên máy</span></div>
-        </div><div className="hero-art" aria-hidden="true"><div className="art-card art-card-back">TIN NHẮN <span>?</span></div><div className="art-card art-card-front"><span className="art-glass">⌕</span><span>HỎI TRƯỚC<br />KHI TIN</span></div></div></section>
-        <section className="section-heading level-heading"><div><p className="eyebrow">BẮT ĐẦU</p><h2>Chọn cấp học</h2></div><p>Mỗi cấp có 12 tình huống riêng. Mọi nhân vật và tài liệu đều được mô phỏng.</p></section>
+        </div><div className="hero-art"><span className="hero-orbit hero-orbit-one" aria-hidden="true">?</span><span className="hero-orbit hero-orbit-two" aria-hidden="true">✓</span><img src={mascotUrl} alt="Mèo Wecheck đội mũ thám tử, cầm kính lúp" /><span className="mascot-caption">Mèo Wecheck</span></div></section>
+        <section className="section-heading level-heading" id="chon-cap-hoc"><div><p className="eyebrow">BẮT ĐẦU</p><h2>Chọn cấp học</h2></div><p>Mỗi cấp có 12 tình huống riêng. Mọi nhân vật và tài liệu đều được mô phỏng.</p></section>
         <fieldset className="school-levels"><legend className="sr-only">Chọn cấp học</legend>{SCHOOL_LEVELS.map(level => <label
           className={'school-level ' + (selectedLevel === level.id ? 'selected' : '')} key={level.id}>
           <input className="level-radio" type="radio" name="school-level" value={level.id}
@@ -178,26 +216,30 @@ function App() {
           <span className="level-count">12 phần chơi <span aria-hidden="true">↗</span></span>
         </label>)}</fieldset>
         <section className="section-heading scenario-section-heading"><div><p className="eyebrow">{levelInfo.grades.toLocaleUpperCase('vi')}</p><h2>12 tình huống {levelInfo.label}</h2></div><p>{selectedLevel === 'high' ? 'Cơ quan, chính sách, điều khoản, báo và nghệ sĩ trong các màn THPT đều hư cấu.' : levelInfo.description}</p></section>
-        <div className="scenario-grid">{displayedScenarios.map((item, index) => <article className="scenario-card" key={item.id}>
-          <div className="card-top"><span className="card-number">{String(index + 1).padStart(2, '0')}</span><span className="tag">{levelInfo.grades}</span></div>
-          <p className="card-topic">{item.topic} · {item.difficulty}</p><h3>{item.title}</h3><p>{item.learningGoal}</p>
+        <div className="catalog-progress"><div><strong>Tiến trình trên thiết bị này</strong><p>{session ? <>Đang chơi: {scenario?.title} · {scenario?.ageBand}</> : 'Chưa có màn đang chơi.'}</p></div>
+          <div className="catalog-progress-actions">{session && <button className="secondary-button" type="button" onClick={() => setPage('game')}>Tiếp tục màn</button>}
+            <button className="reset-all-button" type="button" onClick={resetAllTasks} disabled={!session && selectedLevel === 'middle'} title="Xóa phiên đã lưu và đưa cấp học về THCS">↺ Đặt lại tất cả màn</button></div></div>
+        <div className="scenario-grid" data-level={selectedLevel}>{displayedScenarios.map((item, index) => <article className="scenario-card" key={item.id}>
+          <div className="card-top"><span className="card-number">{String(index + 1).padStart(2, '0')}</span><span className="tag">{item.difficulty}</span></div>
+          <p className="card-topic">{item.topic}</p><h3>{item.title}</h3><p>{item.learningGoal}</p>
           <div className="card-actions"><button className="primary-button" type="button" onClick={() => startScenario(item.id)}>Chơi màn này ↗</button>
             <button className="text-button" type="button" onClick={() => startScenario(item.id, Math.floor(Math.random() * item.variantClaims.length))}>Thử biến thể mẫu</button></div>
         </article>)}</div>
-        {session && <div className="resume-panel"><span>Phiên đang chơi: <strong>{scenario?.title}</strong> · {scenario?.ageBand}</span><button className="secondary-button" type="button" onClick={() => setPage('game')}>Tiếp tục</button></div>}
       </>}
 
       {page === 'game' && scenario && session && <>
-        <div className="game-heading"><div><p className="eyebrow">{scenario.ageBand.toLocaleUpperCase('vi')} / {scenario.topic.toLocaleUpperCase('vi')}</p><h1>{scenario.title}</h1></div><button className="quiet-button" type="button" onClick={resetSession}>Xóa phiên</button></div>
+        <div className="game-heading"><div><p className="eyebrow">{scenario.ageBand.toLocaleUpperCase('vi')} / {scenario.topic.toLocaleUpperCase('vi')}</p><h1>{scenario.title}</h1><p className="game-subtitle">Cùng Mèo Wecheck kiểm tra trước khi chia sẻ.</p></div><div className="game-heading-actions"><img className="game-mascot" src={mascotUrl} alt="" /><button className="quiet-button" type="button" onClick={resetSession}>Xóa phiên</button></div></div>
         {scenario.schoolLevel === 'high' && <p className="simulation-note">Chính sách, điều khoản, tổ chức, báo và nhân vật ở màn này đều là mô phỏng. Video và ảnh được trình bày bằng mô tả hoặc bản chép lời.</p>}
         {session.variantIndex >= 0 && <p className="variant-label">Biến thể mẫu · cùng bộ bằng chứng</p>}
-        <ol className="stepper">{STAGES.map((stage, index) => <li className={index === STAGES.indexOf(session.stage) ? 'current' : index < STAGES.indexOf(session.stage) ? 'done' : ''} key={stage}><span>{index + 1}</span>{STAGE_LABELS[index]}</li>)}</ol>
+        <ol className="stepper" aria-label="Tiến trình màn chơi">{STAGES.map((stage, index) => <li className={index === stageIndex ? 'current' : index < stageIndex ? 'done' : ''} aria-current={index === stageIndex ? 'step' : undefined} key={stage}><span>{index + 1}</span>{STAGE_LABELS[index]}</li>)}</ol>
+        <div className="stage-toolbar"><div className="stage-summary"><span className="stage-count">Bước {stageIndex + 1} / {STAGES.length}</span><div><h2>{STAGE_LABELS[stageIndex]}</h2><p>{STAGE_TASKS[stageIndex]}</p></div></div>
+          {session.stage !== 'feedback' && <button className="reset-stage-button" type="button" onClick={resetCurrentStage} disabled={!canResetStage} title="Xóa câu trả lời ở bước này và các bước sau">↺ Làm lại bước này</button>}</div>
 
         {session.stage === 'stop' && <div className="game-layout">
           <section className="panel story-panel"><p className="eyebrow">01 / DỪNG</p><div className="fake-post"><div className="post-author"><span className="avatar">?</span><div><strong>{scenario.id === SCHEDULE_SCENARIO_ID ? 'Tin nhắn từ một người bạn' : 'Thông tin bạn vừa nhận'}</strong><small>Trong tình huống mô phỏng · chưa kiểm chứng</small></div></div><p>{claim}</p></div>
             {scenario.id === SCHEDULE_SCENARIO_ID && <p className="context-note">Trên nhóm lớp chưa có thông báo chính thức từ cô giáo về việc đổi thời khóa biểu.</p>}</section>
           <section className="panel decision-panel"><p className="eyebrow">QUYẾT ĐỊNH BAN ĐẦU</p><h2>Bạn nghĩ sao?</h2><p>Chọn cảm nhận lúc mới đọc tin. Bạn được đổi ý sau khi xem bằng chứng.</p>
-            <BeliefChoices name="initial-belief" value={session.initialBelief} onChange={initialBelief => setSession(previous => previous ? chooseInitialBelief(previous, initialBelief) : null)} />
+            <BeliefChoices name="initial-belief" value={session.initialBelief} onChange={initialBelief => { setSession(previous => previous ? chooseInitialBelief(previous, initialBelief) : null); setNotice('') }} />
             <button className="primary-button full-button" type="button" onClick={advance}>Tiếp tục →</button></section>
         </div>}
 
@@ -211,7 +253,7 @@ function App() {
         </section></div>}
 
         {session.stage === 'evidence' && <div className="evidence-layout">
-          <section className="panel"><p className="eyebrow">03 / TÌM BẰNG CHỨNG</p><h2>Bạn muốn kiểm tra điều gì?</h2><p>Chọn một nguồn để xem. Bạn có thể hỏi thêm trước khi quyết định lại.</p>
+          <section className="panel"><p className="eyebrow">03 / TÌM BẰNG CHỨNG</p><h2>Bạn muốn kiểm tra điều gì?</h2><p>Chọn một nguồn để xem. Bạn có thể hỏi thêm trước khi quyết định lại.</p><p className="evidence-count">Đã xem {session.revealedSourceIds.length} / {scenario.sources.length} nguồn</p>
             {scenario.id === SCHEDULE_SCENARIO_ID && <fieldset className="question-field"><legend>Bạn sẽ hỏi cô câu gì?</legend><div className="choice-stack">
               {QUESTION_OPTIONS.map(question => <label className={'choice ' + (session.questionChoice === question ? 'selected' : '')} key={question}><input type="radio" name="teacher-question" checked={session.questionChoice === question} disabled={session.contactMethod !== null} onChange={() => update({ questionChoice: question })} /><span>{question}</span></label>)}
             </div></fieldset>}
