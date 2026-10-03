@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { SCHOOL_LEVELS, chooseCatalogLevel, levelForScenario, scenarios, scenariosForLevel } from './catalog'
 import {
-  BELIEF_LABELS, QUESTION_OPTIONS, SCHEDULE_SCENARIO_ID,
+  BELIEF_LABELS, EVIDENCE_ROLE_LABELS, QUESTION_OPTIONS, SCHEDULE_SCENARIO_ID,
   SOURCE_TYPE_LABELS, STATUS_LABELS, canAdvance, chooseInitialBelief, evaluate, evidenceOptions,
   expectedBelief, newSession, reasonOptions, requestEvidence, resetStage, validateScenario,
 } from './logic'
@@ -200,7 +200,7 @@ function App() {
   return <div className="app-shell">
     <header className="site-header"><div className="header-inner">
       <button className="brand" type="button" onClick={() => setPage('catalog')} aria-label="Về danh sách màn chơi">
-        <span className="brand-symbol"><img src={mascotUrl} alt="" /></span><span>Dừng <b>·</b> Xem <b>·</b> Hỏi</span>
+        <span className="brand-symbol"><img src={mascotUrl} alt="" /></span><span>WeCheck</span>
       </button>
       <nav className="top-nav" aria-label="Điều hướng chính">
         <button className={page === 'catalog' ? 'nav-active' : ''} type="button" onClick={() => setPage('catalog')}>Chọn màn</button>
@@ -215,10 +215,10 @@ function App() {
 
       {page === 'catalog' && <>
         <section className="hero"><div className="hero-content"><p className="eyebrow">TRÒ CHƠI KIỂM CHỨNG THÔNG TIN</p>
-          <h1>Thấy một tin lạ?<br /><em>Cùng Mèo Wecheck tìm hiểu!</em></h1>
+          <h1>Thấy một tin lạ?<br /><em>Cùng Mèo WeCheck tìm hiểu!</em></h1>
           <p className="hero-copy">Một tin nhắn nghe rất thật. Bạn sẽ tin, chưa chắc hay không tin? Chọn điều cần hỏi, xem bằng chứng rồi quyết định lại.</p>
           <a className="hero-cta" href="#chon-cap-hoc">Chọn cấp học để bắt đầu <span aria-hidden="true">↓</span></a>
-        </div><div className="hero-art"><span className="hero-orbit hero-orbit-one" aria-hidden="true">?</span><span className="hero-orbit hero-orbit-two" aria-hidden="true">✓</span><img src={mascotUrl} alt="Mèo Wecheck đội mũ thám tử, cầm kính lúp" /><span className="mascot-caption">Mèo Wecheck</span></div></section>
+        </div><div className="hero-art"><span className="hero-orbit hero-orbit-one" aria-hidden="true">?</span><span className="hero-orbit hero-orbit-two" aria-hidden="true">✓</span><img src={mascotUrl} alt="Mèo WeCheck đội mũ thám tử, cầm kính lúp" /><span className="mascot-caption">Mèo WeCheck</span></div></section>
         <section className="section-heading level-heading" id="chon-cap-hoc"><div><p className="eyebrow">BẮT ĐẦU</p><h2>Chọn cấp học</h2></div><p>Mỗi cấp có 12 tình huống riêng. Mọi nhân vật và tài liệu đều được mô phỏng.</p></section>
         <fieldset className="school-levels"><legend className="sr-only">Chọn cấp học</legend>{SCHOOL_LEVELS.map(level => <label
           className={'school-level ' + (selectedLevel === level.id ? 'selected' : '')} key={level.id}>
@@ -240,7 +240,7 @@ function App() {
       </>}
 
       {page === 'game' && scenario && session && <>
-        <div className="game-heading"><div><p className="eyebrow">{scenario.ageBand.toLocaleUpperCase('vi')} / {scenario.topic.toLocaleUpperCase('vi')}</p><h1>{scenario.title}</h1><p className="game-subtitle">Cùng Mèo Wecheck kiểm tra trước khi chia sẻ.</p></div><div className="game-heading-actions"><img className="game-mascot" src={mascotUrl} alt="" /><button className="quiet-button" type="button" onClick={resetSession}>Xóa phiên</button></div></div>
+        <div className="game-heading"><div><p className="eyebrow">{scenario.ageBand.toLocaleUpperCase('vi')} / {scenario.topic.toLocaleUpperCase('vi')}</p><h1>{scenario.title}</h1><p className="game-subtitle">Cùng Mèo WeCheck kiểm tra trước khi chia sẻ.</p></div><div className="game-heading-actions"><img className="game-mascot" src={mascotUrl} alt="" /><button className="quiet-button" type="button" onClick={resetSession}>Xóa phiên</button></div></div>
         {scenario.schoolLevel === 'high' && <p className="simulation-note">Chính sách, điều khoản, tổ chức, báo và nhân vật ở màn này đều là mô phỏng. Video và ảnh được trình bày bằng mô tả hoặc bản chép lời.</p>}
         {session.variantIndex >= 0 && <p className="variant-label">Biến thể mẫu · cùng bộ bằng chứng</p>}
         <ol className="stepper" aria-label="Tiến trình màn chơi">{STAGES.map((stage, index) => <li className={index === stageIndex ? 'current' : index < stageIndex ? 'done' : ''} aria-current={index === stageIndex ? 'step' : undefined} key={stage}><span>{index + 1}</span>{STAGE_LABELS[index]}</li>)}</ol>
@@ -324,7 +324,7 @@ function App() {
             <p>{scenario.feedback.explanation}</p>
             <ol>{scenario.feedback.questions.map(question => <li key={question}>{question}</li>)}</ol>
           </section>
-          <section className="panel evidence-profile"><p className="eyebrow">{scenario.schoolLevel === 'primary' ? 'NHỮNG ĐIỀU EM ĐÃ XEM' : 'NHỮNG NGUỒN BẠN ĐÃ XEM'}</p><h2>{scenario.schoolLevel === 'primary' ? 'Nguồn em đã xem' : 'Hồ sơ bằng chứng'}</h2><div className="rule-list">{evaluation.revealedRules.map(rule => <article className="rule-card" key={rule.source.id}><div className="rule-header"><strong>{rule.source.title}</strong><span className={'role role-' + rule.role}>{rule.role === 'supports' ? 'Ủng hộ' : rule.role === 'refutes' ? 'Phản bác' : rule.role === 'context' ? 'Bối cảnh' : 'Chưa đủ'}</span></div><p>{rule.explanation}</p><small>{scenario.schoolLevel === 'primary' ? 'Lưu ý' : 'Giới hạn'}: {rule.limitation}</small></article>)}</div></section>
+          <section className="panel evidence-profile"><p className="eyebrow">{scenario.schoolLevel === 'primary' ? 'NHỮNG ĐIỀU EM ĐÃ XEM' : 'NHỮNG NGUỒN BẠN ĐÃ XEM'}</p><h2>{scenario.schoolLevel === 'primary' ? 'Nguồn em đã xem' : 'Hồ sơ bằng chứng'}</h2><div className="rule-list">{evaluation.revealedRules.map(rule => <article className="rule-card" key={rule.source.id}><div className="rule-header"><strong>{rule.source.title}</strong><span className={'role role-' + rule.role}>{EVIDENCE_ROLE_LABELS[rule.role]}</span></div><p>{rule.explanation}</p><small>{scenario.schoolLevel === 'primary' ? 'Lưu ý' : 'Giới hạn'}: {rule.limitation}</small></article>)}</div></section>
         </div><aside className="feedback-side"><section className="panel reflection-panel"><p className="eyebrow">{scenario.schoolLevel === 'primary' ? 'EM ĐÃ VIẾT' : 'BẠN ĐÃ VIẾT'}</p><blockquote>{session.reflection}</blockquote><p>{scenario.schoolLevel === 'primary' ? 'Điểm tìm hiểu được tính riêng. Em có thể nói thêm với cô về lý do mình chọn.' : 'Chọn đúng/sai và điểm kiểm chứng được tính riêng. Giáo viên có thể trao đổi thêm về lập luận của bạn.'}</p></section>
           <section className="panel replay-panel"><h3>Chơi tiếp?</h3><button className="primary-button full-button" type="button" onClick={() => startScenario(scenario.id, session.variantIndex)}>Thử lại màn này</button><button className="secondary-button full-button" type="button" onClick={() => setPage('catalog')}>Chọn màn khác</button></section></aside></div>}
       </>}
@@ -332,14 +332,14 @@ function App() {
       {page === 'teacher' && teacherScenario && <div className="teacher-page"><div className="teacher-heading"><p className="eyebrow">DÀNH CHO GIÁO VIÊN</p><h1>Bản đồ kiểm chứng</h1><p>Mục tiêu, đáp án và giới hạn của từng nguồn trong tình huống mô phỏng.</p></div>
         <label className="teacher-picker">Chọn tình huống<select value={teacherScenarioId} onChange={event => setTeacherScenarioId(event.target.value)}>{SCHOOL_LEVELS.map(level => <optgroup key={level.id} label={`${level.label} · ${level.grades}`}>{scenariosForLevel(level.id).map(item => <option value={item.id} key={item.id}>{item.title}</option>)}</optgroup>)}</select></label>
         <div className="teacher-grid"><section className="panel"><p className="eyebrow">MỤC TIÊU & ĐÁP ÁN</p><h2>{teacherScenario.title}</h2><dl><dt>Độ tuổi</dt><dd>{teacherScenario.ageBand}</dd><dt>Mục tiêu</dt><dd>{teacherScenario.learningGoal}</dd><dt>Kết luận chuẩn</dt><dd>{STATUS_LABELS[teacherScenario.truthStatus]} · {BELIEF_LABELS[expectedBelief(teacherScenario.truthStatus)]}</dd><dt>Đường kiểm chứng</dt><dd>{teacherScenario.teacherNotes}</dd></dl></section>
-          <section className="panel"><p className="eyebrow">VAI TRÒ CÁC NGUỒN</p><h2>Nguồn chính và giới hạn</h2><div className="teacher-rules">{teacherScenario.evidenceRules.map(rule => {
+          <section className="panel"><p className="eyebrow">VAI TRÒ CÁC NGUỒN</p><h2>Nguồn chính và giới hạn</h2><p className="teacher-role-intro">Nhãn cho biết nguồn ủng hộ, phản bác, cung cấp bối cảnh hay chưa đủ để kết luận.</p><div className="teacher-rules">{teacherScenario.evidenceRules.map(rule => {
             const source = teacherScenario.sources.find(item => item.id === rule.sourceId)
-            return source && <div key={rule.sourceId}><strong>{source.title}</strong><span>{rule.role}</span><p>{rule.explanation}</p><small>{rule.limitation}</small></div>
+            return source && <article className="teacher-rule-card" key={rule.sourceId}><div className="teacher-rule-heading"><strong>{source.title}</strong><span className={'role role-' + rule.role}>{EVIDENCE_ROLE_LABELS[rule.role]}</span></div><p>{rule.explanation}</p><small><strong>Giới hạn:</strong> {rule.limitation}</small></article>
           })}</div></section></div>
         <div className="teacher-validation">Kiểm tra dữ liệu: {validateScenario(teacherScenario).length === 0 ? 'Nguồn và liên kết hợp lệ.' : validateScenario(teacherScenario).join(' ')}</div>
       </div>}
     </main>
-    <footer className="site-footer"><span>DỪNG · XEM · HỎI</span><p>Demo giáo dục · Mọi nhân vật và tài liệu đều mô phỏng. Không thu thập tin nhắn thật.</p></footer>
+    <footer className="site-footer"><span>WeCheck</span><p>Demo giáo dục · Mọi nhân vật và tài liệu đều mô phỏng. Không thu thập tin nhắn thật.</p></footer>
   </div>
 }
 

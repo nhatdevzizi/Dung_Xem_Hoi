@@ -1,10 +1,10 @@
-# Dừng · Xem · Hỏi — web demo
+# WeCheck — web demo
 
 Trò chơi mô phỏng giúp học sinh kiểm chứng thông tin qua lựa chọn. **Mọi nhân vật, tin nhắn, trường và tài liệu trong game đều là hư cấu.** Không cần tài khoản, cơ sở dữ liệu hoặc khóa API.
 
 ## Thiết kế màu sắc
 
-Mèo Wecheck là điểm nhận diện chính. Màu cam của nhân vật đi cùng xanh dương cho điều hướng, xanh ngọc cho bước kiểm chứng và vàng cho lời mời bắt đầu. Nền đọc và các tài liệu giữ màu sáng, ít trang trí để nội dung dễ theo dõi. Màu được dùng cùng chữ và trạng thái, không phải tín hiệu duy nhất cho một lựa chọn.
+Mèo WeCheck là điểm nhận diện chính. Màu cam của nhân vật đi cùng xanh dương cho điều hướng, xanh ngọc cho bước kiểm chứng và vàng cho lời mời bắt đầu. Nền đọc và các tài liệu giữ màu sáng, ít trang trí để nội dung dễ theo dõi. Màu được dùng cùng chữ và trạng thái, không phải tín hiệu duy nhất cho một lựa chọn.
 
 Cách dùng màu dựa trên nghiên cứu về việc trang trí thị giác quá nhiều có thể phân tán sự chú ý của trẻ nhỏ ([Fisher và cộng sự, 2014](https://pubmed.ncbi.nlm.nih.gov/24855019/)) và hướng dẫn dùng màu để xác định chức năng trong không gian học tập ([D.C. Public Schools, 1972](https://files.eric.ed.gov/fulltext/ED119340.pdf)). Không có bằng chứng rằng một sắc màu riêng lẻ luôn cải thiện việc học. Chữ và nền được chọn theo ngưỡng tương phản WCAG 2.2 AA ([W3C](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)).
 

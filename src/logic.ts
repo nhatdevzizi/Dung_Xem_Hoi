@@ -92,6 +92,12 @@ export const STATUS_LABELS: Record<TruthStatus, string> = {
   misleading: 'Gây hiểu lầm',
   insufficient: 'Chưa đủ bằng chứng',
 }
+export const EVIDENCE_ROLE_LABELS: Record<EvidenceRole, string> = {
+  supports: 'Ủng hộ',
+  refutes: 'Phản bác',
+  context: 'Bối cảnh',
+  insufficient: 'Chưa đủ chứng cứ',
+}
 export const SOURCE_TYPE_LABELS: Record<Source['type'], string> = {
   official: 'Thông báo',
   message: 'Tin nhắn',
