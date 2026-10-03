@@ -77,6 +77,13 @@ function App() {
   const [teacherScenarioId, setTeacherScenarioId] = useState(scenariosForLevel('middle')[0]?.id ?? '')
   const [activeSourceId, setActiveSourceId] = useState<string | null>(null)
   const [notice, setNotice] = useState('')
+  const [resetToast, setResetToast] = useState<{ message: string; tone: 'success' | 'warning' } | null>(null)
+
+  useEffect(() => {
+    if (!resetToast) return
+    const timer = window.setTimeout(() => setResetToast(null), 4000)
+    return () => window.clearTimeout(timer)
+  }, [resetToast])
 
   useEffect(() => {
     try {
@@ -112,6 +119,11 @@ function App() {
     setNotice('')
   }
 
+  function showResetToast(message: string, tone: 'success' | 'warning' = 'success') {
+    setNotice('')
+    setResetToast({ message, tone })
+  }
+
   function startScenario(id: string, variantIndex = -1) {
     const level = levelForScenario(id)
     if (level) setSelectedLevel(level)
@@ -119,6 +131,7 @@ function App() {
     setPage('game')
     setActiveSourceId(null)
     setNotice('')
+    setResetToast(null)
     window.scrollTo(0, 0)
   }
 
@@ -126,7 +139,7 @@ function App() {
     setSession(null)
     setPage('catalog')
     setActiveSourceId(null)
-    setNotice('Đã xóa phiên chơi trong trình duyệt này.')
+    showResetToast('Đã xóa phiên chơi trong trình duyệt này.')
   }
 
   function resetAllTasks() {
@@ -139,9 +152,9 @@ function App() {
       localStorage.removeItem(STORAGE_KEY)
       localStorage.removeItem(LEVEL_STORAGE_KEY)
       localStorage.removeItem(LEGACY_STORAGE_KEY)
-      setNotice('Đã đặt lại toàn bộ tiến trình và cấp học đã chọn trên trình duyệt này.')
+      showResetToast('Đã đặt lại toàn bộ tiến trình và cấp học đã chọn trên trình duyệt này.')
     } catch {
-      setNotice('Đã đặt lại màn chơi hiện tại, nhưng trình duyệt không cho xóa tiến trình đã lưu.')
+      showResetToast('Đã đặt lại màn chơi hiện tại, nhưng trình duyệt không cho xóa tiến trình đã lưu.', 'warning')
     }
   }
 
@@ -149,7 +162,7 @@ function App() {
     if (!session || !canResetStage) return
     setSession(previous => previous ? resetStage(previous) : null)
     setActiveSourceId(null)
-    setNotice('Đã làm lại bước này. Các câu trả lời ở bước sau cũng được xóa để bạn chọn lại.')
+    showResetToast('Đã làm lại bước này. Các câu trả lời ở bước sau cũng được xóa để bạn chọn lại.')
   }
 
   function advance() {
@@ -197,15 +210,14 @@ function App() {
     </div></header>
 
     <main id="main-content">
-      <div className="mode-strip"><span className="mode-pill"><span className="live-dot" />Tình huống mô phỏng · chơi bằng lựa chọn</span><span className="mode-muted">Không cần tài khoản hoặc khóa API</span></div>
       {notice && <div className="notice" role="alert">{notice}</div>}
+      {resetToast && <div className={'reset-toast reset-toast-' + resetToast.tone} role="status">{resetToast.message}</div>}
 
       {page === 'catalog' && <>
         <section className="hero"><div className="hero-content"><p className="eyebrow">TRÒ CHƠI KIỂM CHỨNG THÔNG TIN</p>
           <h1>Thấy một tin lạ?<br /><em>Cùng Mèo Wecheck tìm hiểu!</em></h1>
           <p className="hero-copy">Một tin nhắn nghe rất thật. Bạn sẽ tin, chưa chắc hay không tin? Chọn điều cần hỏi, xem bằng chứng rồi quyết định lại.</p>
           <a className="hero-cta" href="#chon-cap-hoc">Chọn cấp học để bắt đầu <span aria-hidden="true">↓</span></a>
-          <div className="hero-badges"><span>12 màn mỗi cấp học</span><span>Chỉ viết một câu ở cuối</span><span>Tiến trình lưu trên máy</span></div>
         </div><div className="hero-art"><span className="hero-orbit hero-orbit-one" aria-hidden="true">?</span><span className="hero-orbit hero-orbit-two" aria-hidden="true">✓</span><img src={mascotUrl} alt="Mèo Wecheck đội mũ thám tử, cầm kính lúp" /><span className="mascot-caption">Mèo Wecheck</span></div></section>
         <section className="section-heading level-heading" id="chon-cap-hoc"><div><p className="eyebrow">BẮT ĐẦU</p><h2>Chọn cấp học</h2></div><p>Mỗi cấp có 12 tình huống riêng. Mọi nhân vật và tài liệu đều được mô phỏng.</p></section>
         <fieldset className="school-levels"><legend className="sr-only">Chọn cấp học</legend>{SCHOOL_LEVELS.map(level => <label
